@@ -51,6 +51,41 @@ void draw()
     screens.screen8();
     return;
     
+  case 9:
+    screens.screen9();
+    return;
+    
+  case 10:
+    screens.screen10();
+    return;
+    
+  case 11:
+    screens.screen11();
+    return;
+    
+  case 12:
+    screens.screen12();
+    return;
+    
+  case 13:
+    screens.screen13();
+    return;
+    
+  case 14:
+    screens.screen14();
+    return;
+    
+  case 15:
+    screens.screen15();
+    return;
+    
+  case 16:
+    screens.screen16();
+    return;
+    
+  case 17:
+    screens.screen17();
+    return;
   }
 }
 

@@ -18,7 +18,6 @@ class Screens
     rect(1450, 800, 100, 50);
     if (overlaps(1450, 800, 100, 50, mouseX, mouseY) && mousePressed)
     {
-      text("TEST", width/2, height/2);
       screen++;
     }
   }
@@ -210,11 +209,151 @@ class Screens
   
   void screen7()
   {
+    imageMode(CENTER);
+    image(style.screen7, width/2, height/2, 1600, 900);
     
+    fill(style.white);
+    rect(1500, 850, 100, 50);
+    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed)
+    {
+      screen++;
+    }
   }
   
   void screen8()
   {
+    text("Ga je bieden?", width/2, height/5);
     
+    rectMode(CENTER);
+    rect(500, height/2, 400, 400);
+    rect(1100, height/2, 400, 400);
+    
+    fill(style.black);
+    text("Ja", 500, height/2);
+    text("Nee",1100, height/2);
+    fill(style.white);
+    rectMode(CORNER);
+    count++;
+    
+    if (overlaps(500, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 9; count = 0;}
+    if (overlaps(1100, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 10; count = 0;}
+  }
+  
+  void screen9()
+  {
+    imageMode(CENTER);
+    image(style.screen9, width/2, height/2, 1600, 900);
+    
+    rectMode(CENTER);
+    rect(1500, 850, 100, 50);
+    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed) {screen++;}
+  }
+  
+  void screen10()
+  {
+    textSize(60);
+    text("Biedronde over", width/2, height/5);
+    textSize(40);
+    text("De volgende stappen mogen op willekeurige volgorde gedaan worden", width/2, 350);
+    
+    rectMode(CENTER);
+    rect(300, 650, 400, 400);
+    rect(800, 650, 400, 400);
+    rect(1300, 650, 400, 400);
+    
+    fill(style.black);
+    text("Kopen", 300, 650);
+    text("Produceren", 800, 650);
+    text("Verkopen", 1300, 650);
+    fill(style.white);
+    
+    count++;
+    
+    if (overlaps(300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 11; count = 0;}
+    if (overlaps(800, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 12; count = 0;}
+    if (overlaps(1300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 15; count = 0;}
+    
+    text("Einde beurt ->", 1300, 60);
+    rectMode(CENTER);
+    rect(1500, 50, 100, 50);
+    if (overlaps(1500, 50, 100, 50, mouseX, mouseY) && mousePressed) {screen = 16;}
+  }
+  
+  void screen11()
+  {
+    imageMode(CENTER);
+    image(style.screen11, width/2, height/2, 1600, 900);
+    
+    rectMode(CENTER);
+    rect(1500, 850, 100, 50);
+    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed) {screen = 10;}
+  }
+  
+  void screen12()
+  {
+    imageMode(CENTER);
+    image(style.screen12, width/2, height/2, 1600, 900);
+    
+    rectMode(CENTER);
+    rect(1500, 850, 100, 50);
+    count++;
+    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 13; count = 0;}
+    
+  }
+  
+  void screen13()
+  {
+    imageMode(CENTER);
+    image(style.screen13, width/2, height/2, 1600, 900);
+    
+    rectMode(CENTER);
+    rect(1500, 850, 100, 50);
+    count++;
+    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 14; count = 0;}
+  }
+  
+  void screen14()
+  {
+    imageMode(CENTER);
+    image(style.screen14, width/2, height/2, 1600, 900);
+    
+    rectMode(CENTER);
+    rect(1500, 850, 100, 50);
+    count++;
+    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 10; count = 0;}
+  }
+  
+  void screen15()
+  {
+    imageMode(CENTER);
+    image(style.screen15, width/2, height/2, 1600, 900);
+    
+    rectMode(CENTER);
+    rect(1500, 850, 100, 50);
+    count++;
+    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 10; count = 0;}
+  }
+  
+  void screen16()
+  {
+    imageMode(CENTER);
+    image(style.screen16, width/2, height/2, 1600, 900);
+    
+    rectMode(CENTER);
+    rect(1500, 850, 100, 50);
+    count++;
+    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 17; count = 0;}
+  }
+  
+  void screen17()
+  {
+    text("De volgende speler is nu aan de beurt", width/2, height/5);
+    text("Herhaal dezelfde stappen", width/2, height/3);
+    text("Klik door om naar het begin van het stappenplan te gaan", width/2, 500);
+    
+    rectMode(CENTER);
+    rect(1500, 850, 100, 50);
+    count++;
+    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 8; count = 0;}
   }
 }
