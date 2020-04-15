@@ -2,6 +2,7 @@ Screens screens;
 Style style;
 int screen = 1;
 int amountOfPlayers;
+int count;
 //uwu
 void setup()
 {
@@ -101,4 +102,36 @@ boolean overlaps(float x0, float y0, float w0, float h0, float x1, float y1)
   {
     return false;
   }
+}
+
+//This function draws a rectangle in the bottom left corner of the screen
+//When it is clicked the screen changes to the screen number given in the paramater of this function
+//Count makes it impossible for the player to accidentally skip a screen
+void previous(int previousScreen)
+{
+    rectMode(CENTER);
+    fill(style.white);
+    rect(100, 865, 100, 50);
+    count++;
+    if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
+    {
+      screen = previousScreen;
+      count = 0;
+    }
+}
+
+//This function draws a rectangle in the bottom right corner of the screen
+//When it is clicked the screen changes to the screen number given in the paramater of this function
+//Count makes it impossible for the player to accidentally skip a screen
+void next(int nextScreen)
+{
+    rectMode(CENTER);
+    fill(style.white);
+    rect(1500, 865, 100, 50);
+    count++;
+    if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
+    {
+      screen = nextScreen;
+      count = 0;
+    }
 }

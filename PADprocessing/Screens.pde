@@ -4,7 +4,6 @@
 
 class Screens
 {
-  int count;
   Screens()
   {
   }
@@ -15,11 +14,8 @@ class Screens
     textSize(style.textSize);
     text("Money maker beginners game", width/2, height/4);
     text("Interactive tutorial", width/2, height/2);
-    rect(1450, 800, 100, 50);
-    if (overlaps(1450, 800, 100, 50, mouseX, mouseY) && mousePressed)
-    {
-      screen++;
-    }
+    
+    next(2);
   }
 
   void screen2()
@@ -70,13 +66,10 @@ class Screens
     //because of this variable you can't go to the next screen within the first 0.5 seconds (30 frames)
     count++;
 
-    if (overlaps(400, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
-      screen = 4; 
-      count = 0;
-    }
-    if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
-      screen = 7;
-    }
+    //Button for 'bord opzetten'
+    if (overlaps(400, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {screen = 4; count = 0;}
+    //Button for 'start spel'
+    if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {screen = 7;}
   }
 
   void screen4()
@@ -84,13 +77,7 @@ class Screens
     imageMode(CENTER);
     image(style.screen4, width/2, height/2, 1600, 900);
 
-    fill(style.white);
-    rect(1500, 865, 100, 50);
-
-    if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed)
-    {
-      screen = 5;
-    }
+    next(5);
   }
 
   void screen5()
@@ -102,13 +89,8 @@ class Screens
     text("-Als een speler 10 financieringskaarten heeft", width/2, 500);
     text("-Als er 3 bankruns zijn geweest", width/2, 600);
 
-    rect(1500, 865, 100, 50);
-    count++;
-    if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 30)
-    {
-      screen = 6;
-      count = 0;
-    }
+    next(6);
+    previous(4);
   }
 
   void screen6()
@@ -135,7 +117,8 @@ class Screens
     //groene kaarten
     rect(275, 865, 160, 57);
     
-    
+    strokeWeight(1);
+
     //Productiemarkt
     if (overlaps(65, 95, 125, 155, mouseX, mouseY))
     {
@@ -204,7 +187,7 @@ class Screens
       imageMode(CENTER);
     }
     
-    
+    next(3);
   }
   
   void screen7()
@@ -212,12 +195,7 @@ class Screens
     imageMode(CENTER);
     image(style.screen7, width/2, height/2, 1600, 900);
     
-    fill(style.white);
-    rect(1500, 850, 100, 50);
-    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed)
-    {
-      screen++;
-    }
+    next(8);
   }
   
   void screen8()
@@ -244,9 +222,7 @@ class Screens
     imageMode(CENTER);
     image(style.screen9, width/2, height/2, 1600, 900);
     
-    rectMode(CENTER);
-    rect(1500, 850, 100, 50);
-    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed) {screen++;}
+    next(10);
   }
   
   void screen10()
@@ -284,9 +260,7 @@ class Screens
     imageMode(CENTER);
     image(style.screen11, width/2, height/2, 1600, 900);
     
-    rectMode(CENTER);
-    rect(1500, 850, 100, 50);
-    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed) {screen = 10;}
+    next(10);
   }
   
   void screen12()
@@ -294,10 +268,7 @@ class Screens
     imageMode(CENTER);
     image(style.screen12, width/2, height/2, 1600, 900);
     
-    rectMode(CENTER);
-    rect(1500, 850, 100, 50);
-    count++;
-    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 13; count = 0;}
+    next(13);
     
   }
   
@@ -306,10 +277,8 @@ class Screens
     imageMode(CENTER);
     image(style.screen13, width/2, height/2, 1600, 900);
     
-    rectMode(CENTER);
-    rect(1500, 850, 100, 50);
-    count++;
-    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 14; count = 0;}
+    previous(12);
+    next(14);
   }
   
   void screen14()
@@ -317,10 +286,8 @@ class Screens
     imageMode(CENTER);
     image(style.screen14, width/2, height/2, 1600, 900);
     
-    rectMode(CENTER);
-    rect(1500, 850, 100, 50);
-    count++;
-    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 10; count = 0;}
+    previous(13);
+    next(10);
   }
   
   void screen15()
@@ -328,10 +295,7 @@ class Screens
     imageMode(CENTER);
     image(style.screen15, width/2, height/2, 1600, 900);
     
-    rectMode(CENTER);
-    rect(1500, 850, 100, 50);
-    count++;
-    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 10; count = 0;}
+    next(10);
   }
   
   void screen16()
@@ -339,10 +303,8 @@ class Screens
     imageMode(CENTER);
     image(style.screen16, width/2, height/2, 1600, 900);
     
-    rectMode(CENTER);
-    rect(1500, 850, 100, 50);
-    count++;
-    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 17; count = 0;}
+    previous(10);
+    next(17);
   }
   
   void screen17()
@@ -351,9 +313,7 @@ class Screens
     text("Herhaal dezelfde stappen", width/2, height/3);
     text("Klik door om naar het begin van het stappenplan te gaan", width/2, 500);
     
-    rectMode(CENTER);
-    rect(1500, 850, 100, 50);
-    count++;
-    if (overlaps(1500, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 30) {screen = 8; count = 0;}
+    previous(16);
+    next(8);
   }
 }
