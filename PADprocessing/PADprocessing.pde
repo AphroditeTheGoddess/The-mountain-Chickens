@@ -1,4 +1,5 @@
 Screens screens;
+RoundCounter counter;
 Style style;
 int screen = 1;
 int amountOfPlayers;
@@ -9,6 +10,7 @@ void setup()
   size(1600, 900);
   screens = new Screens();
   style = new Style();
+  counter = new RoundCounter();
   textAlign(CENTER);
   rectMode(CENTER);
 }
@@ -17,6 +19,7 @@ void draw()
 {
   background(style.backgroundColor);
   println(screen);
+  println(counter.turn);
 
   switch(screen)
   {
