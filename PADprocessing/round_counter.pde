@@ -1,21 +1,29 @@
 class RoundCounter {
-  int player;
   int turn = 0;
   int round;
+  boolean turnGoesUp;
+  boolean screen8;
 
 
   RoundCounter() {
   }
 
   void Count() {
-    player = amountOfPlayers;
-    if (turn == player){
-    turn = 0;
-    round++;
+    if (turn == amountOfPlayers) {
+      turn = 0;
+      round++;
     }
-    if (screen == 8){
-    turn++;
-    
+    if (screen == 8) {
+      turnGoesUp = true;
+      screen8 = true;
+
+      if (turnGoesUp == true && screen8 == true) {
+        turn++;
+        turnGoesUp = false;
+      }
+    }
+    if (screen != 8) {
+      screen8 = false;
     }
   }
 }

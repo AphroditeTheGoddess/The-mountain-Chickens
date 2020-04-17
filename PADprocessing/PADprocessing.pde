@@ -20,7 +20,7 @@ void draw()
   background(style.backgroundColor);
   println(screen);
   println(counter.turn);
-
+  counter.Count();
   switch(screen)
   {
   case 1:
@@ -30,63 +30,63 @@ void draw()
   case 2:
     screens.screen2();
     return;
-    
+
   case 3:
     screens.screen3();
     return;
-   
+
   case 4:
     screens.screen4();
     return;
-    
+
   case 5:
     screens.screen5();
     return;
-    
+
   case 6:
     screens.screen6();
     return;
-    
+
   case 7:
     screens.screen7();
     return;
-  
+
   case 8:
     screens.screen8();
     return;
-    
+
   case 9:
     screens.screen9();
     return;
-    
+
   case 10:
     screens.screen10();
     return;
-    
+
   case 11:
     screens.screen11();
     return;
-    
+
   case 12:
     screens.screen12();
     return;
-    
+
   case 13:
     screens.screen13();
     return;
-    
+
   case 14:
     screens.screen14();
     return;
-    
+
   case 15:
     screens.screen15();
     return;
-    
+
   case 16:
     screens.screen16();
     return;
-    
+
   case 17:
     screens.screen17();
     return;
@@ -112,15 +112,15 @@ boolean overlaps(float x0, float y0, float w0, float h0, float x1, float y1)
 //Count makes it impossible for the player to accidentally skip a screen
 void previous(int previousScreen)
 {
-    rectMode(CENTER);
-    fill(style.white);
-    rect(100, 865, 100, 50);
-    count++;
-    if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
-    {
-      screen = previousScreen;
-      count = 0;
-    }
+  rectMode(CENTER);
+  fill(style.white);
+  rect(100, 865, 100, 50);
+  count++;
+  if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
+  {
+    screen = previousScreen;
+    count = 0;
+  }
 }
 
 //This function draws a rectangle in the bottom right corner of the screen
@@ -128,13 +128,13 @@ void previous(int previousScreen)
 //Count makes it impossible for the player to accidentally skip a screen
 void next(int nextScreen)
 {
-    rectMode(CENTER);
-    fill(style.white);
-    rect(1500, 865, 100, 50);
-    count++;
-    if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
-    {
-      screen = nextScreen;
-      count = 0;
-    }
+  rectMode(CENTER);
+  fill(style.white);
+  rect(1500, 865, 100, 50);
+  count++;
+  if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
+  {
+    screen = nextScreen;
+    count = 0;
+  }
 }
