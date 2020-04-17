@@ -4,8 +4,10 @@
 
 class Screens
 {
+  Boolean playersSelected;
   Screens()
   {
+    playersSelected = false;
   }
 
   void screen1()
@@ -14,7 +16,7 @@ class Screens
     textSize(style.textSize);
     text("Money maker beginners game", width/2, height/4);
     text("Interactive tutorial", width/2, height/2);
-    
+
     next(2);
   }
 
@@ -36,18 +38,22 @@ class Screens
     if (overlaps(400, 300, 100, 100, mouseX, mouseY) && mousePressed) {
       screen = 3; 
       amountOfPlayers = 3;
+      playersSelected = true;
     }
     if (overlaps(1200, 300, 100, 100, mouseX, mouseY) && mousePressed) {
       screen = 3; 
       amountOfPlayers = 4;
+      playersSelected = true;
     }
     if (overlaps(400, 600, 100, 100, mouseX, mouseY) && mousePressed) {
       screen = 3; 
       amountOfPlayers = 5;
+      playersSelected = true;
     }
     if (overlaps(1200, 600, 100, 100, mouseX, mouseY) && mousePressed) {
       screen = 3; 
       amountOfPlayers = 6;
+      playersSelected = true;
     }
   }
 
@@ -67,9 +73,14 @@ class Screens
     count++;
 
     //Button for 'bord opzetten'
-    if (overlaps(400, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {screen = 4; count = 0;}
+    if (overlaps(400, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
+      screen = 4; 
+      count = 0;
+    }
     //Button for 'start spel'
-    if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {screen = 7;}
+    if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
+      screen = 7;
+    }
   }
 
   void screen4()
@@ -98,7 +109,7 @@ class Screens
     image(style.screen6, width/2, height/2, 1600, 900);
     noFill();
     strokeWeight(5);
-    
+
     //productiemarkt
     rect(65, 95, 125, 155);
     //Productiereserve
@@ -116,7 +127,7 @@ class Screens
     rect(815, 865, 865, 57);
     //groene kaarten
     rect(275, 865, 160, 57);
-    
+
     strokeWeight(1);
 
     //Productiemarkt
@@ -148,7 +159,7 @@ class Screens
       image(style.text3, mouseX, mouseY);
       imageMode(CENTER);
     }
-    
+
     //bankrunmeter
     if (overlaps(464, 96, 467, 111, mouseX, mouseY))
     {
@@ -156,7 +167,7 @@ class Screens
       image(style.text4, mouseX, mouseY);
       imageMode(CENTER);
     }
-    
+
     //krediet klasse
     if (overlaps(1100, 75, 465, 92, mouseX, mouseY))
     {
@@ -164,7 +175,7 @@ class Screens
       image(style.text8, mouseX, mouseY);
       imageMode(CENTER);
     }
-    
+
     //rode kaarten
     if (overlaps(1350, 865, 160, 57, mouseX, mouseY))
     {
@@ -186,133 +197,149 @@ class Screens
       image(style.text7, mouseX, mouseY-105);
       imageMode(CENTER);
     }
-    
+
     next(3);
   }
-  
+
   void screen7()
   {
     imageMode(CENTER);
     image(style.screen7, width/2, height/2, 1600, 900);
-    
+
     next(8);
   }
-  
+
   void screen8()
   {
     text("Ga je bieden?", width/2, height/5);
-    
+
     rectMode(CENTER);
     rect(500, height/2, 400, 400);
     rect(1100, height/2, 400, 400);
-    
+
     fill(style.black);
     text("Ja", 500, height/2);
-    text("Nee",1100, height/2);
+    text("Nee", 1100, height/2);
     fill(style.white);
     rectMode(CORNER);
     count++;
-    
-    if (overlaps(500, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 9; count = 0;}
-    if (overlaps(1100, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 10; count = 0;}
+
+    if (overlaps(500, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      screen = 9; 
+      count = 0;
+    }
+    if (overlaps(1100, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      screen = 10; 
+      count = 0;
+    }
   }
-  
+
   void screen9()
   {
     imageMode(CENTER);
     image(style.screen9, width/2, height/2, 1600, 900);
-    
+
     next(10);
   }
-  
+
   void screen10()
   {
     textSize(60);
     text("Biedronde over", width/2, height/5);
     textSize(40);
     text("De volgende stappen mogen op willekeurige volgorde gedaan worden", width/2, 350);
-    
+
     rectMode(CENTER);
     rect(300, 650, 400, 400);
     rect(800, 650, 400, 400);
     rect(1300, 650, 400, 400);
-    
+
     fill(style.black);
     text("Kopen", 300, 650);
     text("Produceren", 800, 650);
     text("Verkopen", 1300, 650);
     fill(style.white);
-    
+
     count++;
-    
-    if (overlaps(300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 11; count = 0;}
-    if (overlaps(800, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 12; count = 0;}
-    if (overlaps(1300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {screen = 15; count = 0;}
-    
+
+    if (overlaps(300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      screen = 11; 
+      count = 0;
+    }
+    if (overlaps(800, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      screen = 12; 
+      count = 0;
+    }
+    if (overlaps(1300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      screen = 15; 
+      count = 0;
+    }
+
     text("Einde beurt ->", 1300, 60);
     rectMode(CENTER);
     rect(1500, 50, 100, 50);
-    if (overlaps(1500, 50, 100, 50, mouseX, mouseY) && mousePressed) {screen = 16;}
+    if (overlaps(1500, 50, 100, 50, mouseX, mouseY) && mousePressed) {
+      screen = 16;
+    }
   }
-  
+
   void screen11()
   {
     imageMode(CENTER);
     image(style.screen11, width/2, height/2, 1600, 900);
-    
+
     next(10);
   }
-  
+
   void screen12()
   {
     imageMode(CENTER);
     image(style.screen12, width/2, height/2, 1600, 900);
-    
+
     next(13);
-    
   }
-  
+
   void screen13()
   {
     imageMode(CENTER);
     image(style.screen13, width/2, height/2, 1600, 900);
-    
+
     previous(12);
     next(14);
   }
-  
+
   void screen14()
   {
     imageMode(CENTER);
     image(style.screen14, width/2, height/2, 1600, 900);
-    
+
     previous(13);
     next(10);
   }
-  
+
   void screen15()
   {
     imageMode(CENTER);
     image(style.screen15, width/2, height/2, 1600, 900);
-    
+
     next(10);
   }
-  
+
   void screen16()
   {
     imageMode(CENTER);
     image(style.screen16, width/2, height/2, 1600, 900);
-    
+
     previous(10);
     next(17);
   }
-  
+
   void screen17()
   {
     text("De volgende speler is nu aan de beurt", width/2, height/5);
     text("Herhaal dezelfde stappen", width/2, height/3);
     text("Klik door om naar het begin van het stappenplan te gaan", width/2, 500);
-    
+
     previous(16);
     next(8);
   }

@@ -6,7 +6,7 @@ class Style
   color backgroundColor;
   color black;
   color white;
-  
+
   PImage screen4;
   PImage screen6;
   PImage screen7;
@@ -17,7 +17,7 @@ class Style
   PImage screen14;
   PImage screen15;
   PImage screen16;
-  
+
   PImage text1;
   PImage text2;
   PImage text3;
@@ -26,32 +26,32 @@ class Style
   PImage text6;
   PImage text7;
   PImage text8;
-  
-    Style()
-    {
-      textSize = 80;
-      backgroundColor = color(100, 200, 300);
-      black = color(0);
-      white = color(255);
-      
-      screen4 = loadImage("content/screen4.PNG");
-      screen6 = loadImage("content/screen6.PNG");
-      screen7 = loadImage("content/screen7.PNG");
-      screen9 = loadImage("content/screen9.PNG");
-      screen11 = loadImage("content/screen11.PNG");
-      screen12 = loadImage("content/screen12.PNG");
-      screen13 = loadImage("content/screen13.PNG");
-      screen14 = loadImage("content/screen14.PNG");
-      screen15 = loadImage("content/screen15.PNG");
-      screen16 = loadImage("content/screen16.PNG");
-      
-      text1 = loadImage("content/text1.PNG");
-      text2 = loadImage("content/text2.PNG");
-      text3 = loadImage("content/text3.PNG");
-      text4 = loadImage("content/text4.PNG");
-      text5 = loadImage("content/text5.PNG");
-      text6 = loadImage("content/text6.PNG");
-      text7 = loadImage("content/text7.PNG");
-      text8 = loadImage("content/text8.PNG");
-    }
+
+  Style()
+  {
+    textSize = 80;
+    backgroundColor = color(100, 200, 300);
+    black = color(0);
+    white = color(255);
+
+    screen4 = loadImage("content/screen4.PNG");
+    screen6 = loadImage("content/screen6.PNG");
+    screen7 = loadImage("content/screen7.PNG");
+    screen9 = loadImage("content/screen9.PNG");
+    screen11 = loadImage("content/screen11.PNG");
+    screen12 = loadImage("content/screen12.PNG");
+    screen13 = loadImage("content/screen13.PNG");
+    screen14 = loadImage("content/screen14.PNG");
+    screen15 = loadImage("content/screen15.PNG");
+    screen16 = loadImage("content/screen16.PNG");
+
+    text1 = loadImage("content/text1.PNG");
+    text2 = loadImage("content/text2.PNG");
+    text3 = loadImage("content/text3.PNG");
+    text4 = loadImage("content/text4.PNG");
+    text5 = loadImage("content/text5.PNG");
+    text6 = loadImage("content/text6.PNG");
+    text7 = loadImage("content/text7.PNG");
+    text8 = loadImage("content/text8.PNG");
+  }
 }

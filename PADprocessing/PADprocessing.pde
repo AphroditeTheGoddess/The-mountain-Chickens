@@ -18,8 +18,9 @@ void setup()
 void draw()
 {
   background(style.backgroundColor);
-  println(screen);
-  println(counter.turn);
+  //println(screen);
+  println("turn " + counter.turn);
+  println("round " + counter.round);
   counter.Count();
   switch(screen)
   {
