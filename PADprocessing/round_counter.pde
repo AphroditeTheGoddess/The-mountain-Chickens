@@ -1,5 +1,5 @@
 class RoundCounter {
-  int turn = 0;
+  int turn = 1;
   int round;
   boolean turnGoesUp;
 
@@ -7,17 +7,17 @@ class RoundCounter {
   }
 
   void Count() {
-    if (turn > amountOfPlayers && screens.playersSelected == true) {
-      turn = 0;
+    if (turn > amountOfPlayers +1 && screens.playersSelected == true) {
+      turn = 1;
       round++;
     }
 
-    if (screen == 8 && turnGoesUp == false) {
+    if (screen == 17 && turnGoesUp == false) {
       turn++;
       turnGoesUp = true;
     }
 
-    if (screen != 8) {
+    if (screen != 17) {
       turnGoesUp = false;
     }
   }
