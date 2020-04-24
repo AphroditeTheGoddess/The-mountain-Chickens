@@ -211,7 +211,15 @@ class Screens
 
   void screen8()
   {
-    text("Ga je bieden?", width/2, height/5);
+    text("Draai een financieringskaart om", width/2, height/10);
+    text("Ga je bieden?", width/2, height/4.5);
+    
+    if(bankrun.bankrunThisTurn == false)
+    {
+    textSize(60);
+    text("Liggen er al 5 kaarten open? -->", width/3, 800);
+    bankrun.bankrunFiche();
+    }
 
     rectMode(CENTER);
     rect(500, height/2, 400, 400);
@@ -339,8 +347,17 @@ class Screens
     text("De volgende speler is nu aan de beurt", width/2, height/5);
     text("Herhaal dezelfde stappen", width/2, height/3);
     text("Klik door om naar het begin van het stappenplan te gaan", width/2, 500);
+    
+    bankrun.bankrunThisTurn = false;
 
     previous(16);
+    next(8);
+  }
+  
+  //bankrun info screen
+  void screen18()
+  {
+    text("Verplaats het voorste bankrunfiche met 1 stap", width/2, height/5);
     next(8);
   }
 }

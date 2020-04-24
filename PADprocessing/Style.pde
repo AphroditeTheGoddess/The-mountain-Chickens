@@ -26,6 +26,8 @@ class Style
   PImage text6;
   PImage text7;
   PImage text8;
+  
+  PImage bankrunfiche;
 
   Style()
   {
@@ -53,5 +55,7 @@ class Style
     text6 = loadImage("content/text6.PNG");
     text7 = loadImage("content/text7.PNG");
     text8 = loadImage("content/text8.PNG");
+    
+    bankrunfiche = loadImage("content/bankrunfiche.png");
   }
 }

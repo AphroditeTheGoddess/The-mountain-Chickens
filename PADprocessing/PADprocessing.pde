@@ -1,6 +1,7 @@
 Screens screens;
 RoundCounter counter;
 Style style;
+Bankrun bankrun;
 int screen = 1;
 int amountOfPlayers;
 int count;
@@ -11,6 +12,7 @@ void setup()
   screens = new Screens();
   style = new Style();
   counter = new RoundCounter();
+  bankrun = new Bankrun();
   textAlign(CENTER);
   rectMode(CENTER);
 }
@@ -19,8 +21,10 @@ void draw()
 {
   background(style.backgroundColor);
   //println(screen);
+  println("Screen " + screen);
   println("turn " + counter.turn);
   println("round " + counter.round);
+  println("bankrun " + bankrun.bankrunCount);
   counter.Count();
   switch(screen)
   {
@@ -90,6 +94,10 @@ void draw()
 
   case 17:
     screens.screen17();
+    return;
+    
+  case 18:
+    screens.screen18();
     return;
   }
 }
