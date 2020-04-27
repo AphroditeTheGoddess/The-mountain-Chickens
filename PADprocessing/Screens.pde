@@ -332,17 +332,123 @@ class Screens
 
     next(10);
   }
-
+  
   void screen16()
   {
     imageMode(CENTER);
-    image(style.screen16, width/2, height/2, 1600, 900);
+    background(255);
+    fill(0);
+    text("Gooi nu een kredietdobbelsteen.", 500, 100);
+    text("Waarop is je dobbelsteen geland?", 500, 200);
+    
+    //When you click on the dices, it will bring you to a page about that specific dice.
+    //Red 10
+    image(style.r10, 400, 400, 200, 200);
+    if (overlaps(400, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 17;
+    }
+    
+    //Red 20
+    image(style.r20, 400, 700, 200, 200);
+    if (overlaps(400, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 18;
+    }
+    
+    //Green 10
+    image(style.g10, 800, 400, 200, 200);
+    if (overlaps(800, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 19;
+    }
+    
+    //Green 20
+    image(style.g20, 800, 700, 200, 200);
+    if (overlaps(800, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 20;
+    }
+    
+    //Blue 10
+    image(style.b10, 1200, 400, 200, 200);
+    if (overlaps(1200, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 21;
+    }
+    
+    //Blue 20
+    image(style.b20, 1200, 700, 200, 200);    
+    if (overlaps(1200, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 22;
+    }
 
     previous(10);
-    next(17);
+    next(23);
   }
-
+  
   void screen17()
+  {
+    imageMode(CENTER);
+    background(255);
+    fill(0);
+    text("Haal één blokje uit de productiemarkt.", 500, 100);
+    image(style.r10, 400, 400, 200, 200);
+    previous(16);
+    next(23);
+  }
+  
+  void screen18()
+  {
+    imageMode(CENTER);
+    background(255);
+    fill(0);
+    text("Haal twéé blokjes uit de productiemarkt.", 500, 100);
+    image(style.r20, 400, 700, 200, 200);
+    previous(16);
+    next(23);
+  }
+  
+  void screen19()
+  {
+    imageMode(CENTER);
+    background(255);
+    fill(0);
+    text("Haal één blokje uit de consumptiemarkt.", 500, 100);    
+    image(style.g10, 800, 400, 200, 200);
+    previous(16);
+    next(23);
+  }
+  
+  void screen20()
+  {
+    imageMode(CENTER);
+    background(255);
+    fill(0);
+    text("Haal twéé blokjes uit de consumptiemarkt.", 500, 100);
+    image(style.g20, 800, 700, 200, 200);
+    previous(16);
+    next(23);
+  }
+  
+  void screen21()
+  {
+    imageMode(CENTER);
+    background(255);
+    fill(0);
+    text("Verzet het bankrunfiche één stap.", 500, 100);
+    image(style.b10, 1200, 400, 200, 200);
+    previous(16);
+    next(23);
+  }
+  
+  void screen22()
+  {
+    imageMode(CENTER);
+    background(255);
+    fill(0);
+    text("Verzet het bankrunfiche twéé stappen.", 500, 100);
+    image(style.b20, 1200, 700, 200, 200);
+    previous(16);
+    next(23);
+  }
+  
+  void screen23()
   {
     text("De volgende speler is nu aan de beurt", width/2, height/5);
     text("Herhaal dezelfde stappen", width/2, height/3);
@@ -355,7 +461,7 @@ class Screens
   }
   
   //bankrun info screen
-  void screen18()
+  void screen24()
   {
     text("Verplaats het voorste bankrunfiche met 1 stap", width/2, height/5);
     next(8);

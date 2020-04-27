@@ -27,6 +27,13 @@ class Style
   PImage text7;
   PImage text8;
   
+  PImage r10;
+  PImage r20;
+  PImage g10;
+  PImage g20;
+  PImage b10;
+  PImage b20;
+  
   PImage bankrunfiche;
 
   Style()
@@ -45,7 +52,7 @@ class Style
     screen13 = loadImage("content/screen13.PNG");
     screen14 = loadImage("content/screen14.PNG");
     screen15 = loadImage("content/screen15.PNG");
-    screen16 = loadImage("content/screen16.PNG");
+    //screen16 = loadImage("content/screen16.PNG");
 
     text1 = loadImage("content/text1.PNG");
     text2 = loadImage("content/text2.PNG");
@@ -55,6 +62,13 @@ class Style
     text6 = loadImage("content/text6.PNG");
     text7 = loadImage("content/text7.PNG");
     text8 = loadImage("content/text8.PNG");
+    
+    r10 = loadImage("content/10r.png");
+    r20 = loadImage("content/20r.png");
+    g10 = loadImage("content/10g.png");
+    g20 = loadImage("content/20g.png");
+    b10 = loadImage("content/10b.png");
+    b20 = loadImage("content/20b.png");
     
     bankrunfiche = loadImage("content/bankrunfiche.png");
   }

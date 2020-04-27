@@ -12,12 +12,12 @@ class RoundCounter {
       round++;
     }
 
-    if (screen == 17 && turnGoesUp == false) {
+    if (screen == 23 && turnGoesUp == false) {
       turn++;
       turnGoesUp = true;
     }
 
-    if (screen != 17) {
+    if (screen != 23) {
       turnGoesUp = false;
     }
   }

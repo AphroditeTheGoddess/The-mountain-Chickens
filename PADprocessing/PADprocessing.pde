@@ -99,6 +99,30 @@ void draw()
   case 18:
     screens.screen18();
     return;
+    
+  case 19:
+    screens.screen19();
+    return;
+    
+  case 20:
+    screens.screen20();
+    return;
+    
+  case 21:
+    screens.screen21();
+    return;
+    
+  case 22:
+    screens.screen22();
+    return;
+    
+  case 23:
+    screens.screen23();
+    return;
+    
+  case 24:
+    screens.screen24();
+    return;
   }
 }
 
