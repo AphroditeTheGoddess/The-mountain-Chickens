@@ -8,11 +8,12 @@ int count;
 //uwu
 void setup()
 {
-  size(1600, 900);
+  size(1650, 900);
   screens = new Screens();
   style = new Style();
   counter = new RoundCounter();
   bankrun = new Bankrun();
+  glossaryInit();
   textAlign(CENTER);
   rectMode(CENTER);
 }
@@ -26,9 +27,11 @@ void draw()
   println("round " + counter.round);
   println("bankrun " + bankrun.bankrunCount);
   counter.Count();
-  
+
   bankrun.bankrunTrigger();
-  
+
+  glossaryHandler();
+
   switch(screen)
   {
   case 1:
@@ -98,39 +101,39 @@ void draw()
   case 17:
     screens.screen17();
     return;
-    
+
   case 18:
     screens.screen18();
     return;
-    
+
   case 19:
     screens.screen19();
     return;
-    
+
   case 20:
     screens.screen20();
     return;
-    
+
   case 21:
     screens.screen21();
     return;
-    
+
   case 22:
     screens.screen22();
     return;
-    
+
   case 23:
     screens.screen23();
     return;
-    
+
   case 24:
     screens.screen24();
     return;
-    
+
   case 25:
     screens.screen25();
     return;
-    
+
   case 26:
     screens.screen26();
     return;
@@ -176,7 +179,7 @@ void next(int nextScreen)
   fill(style.white);
   rect(1500, 865, 100, 50);
   count++;
-      if(bankrun.bankrun)
+  if (bankrun.bankrun)
   {
     screen = 26;
     return;
