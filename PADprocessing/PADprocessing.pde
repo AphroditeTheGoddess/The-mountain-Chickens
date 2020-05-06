@@ -26,6 +26,9 @@ void draw()
   println("round " + counter.round);
   println("bankrun " + bankrun.bankrunCount);
   counter.Count();
+  
+  bankrun.bankrunTrigger();
+  
   switch(screen)
   {
   case 1:
@@ -123,6 +126,14 @@ void draw()
   case 24:
     screens.screen24();
     return;
+    
+  case 25:
+    screens.screen25();
+    return;
+    
+  case 26:
+    screens.screen26();
+    return;
   }
 }
 
@@ -165,6 +176,11 @@ void next(int nextScreen)
   fill(style.white);
   rect(1500, 865, 100, 50);
   count++;
+      if(bankrun.bankrun)
+  {
+    screen = 26;
+    return;
+  }
   if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
   {
     screen = nextScreen;

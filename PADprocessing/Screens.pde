@@ -5,9 +5,11 @@
 class Screens
 {
   Boolean playersSelected;
+  Boolean bankrunFichesSelected;
   Screens()
   {
     playersSelected = false;
+    bankrunFichesSelected = false;
   }
 
   void screen1()
@@ -36,22 +38,22 @@ class Screens
     text("6", 1200, 625);
 
     if (overlaps(400, 300, 100, 100, mouseX, mouseY) && mousePressed) {
-      screen = 3; 
+      screen = 25; 
       amountOfPlayers = 3;
       playersSelected = true;
     }
     if (overlaps(1200, 300, 100, 100, mouseX, mouseY) && mousePressed) {
-      screen = 3; 
+      screen = 25; 
       amountOfPlayers = 4;
       playersSelected = true;
     }
     if (overlaps(400, 600, 100, 100, mouseX, mouseY) && mousePressed) {
-      screen = 3; 
+      screen = 25; 
       amountOfPlayers = 5;
       playersSelected = true;
     }
     if (overlaps(1200, 600, 100, 100, mouseX, mouseY) && mousePressed) {
-      screen = 3; 
+      screen = 25; 
       amountOfPlayers = 6;
       playersSelected = true;
     }
@@ -67,6 +69,8 @@ class Screens
     textSize(65);
     text("Bord opzetten", 400, 475);
     text("Start spel", 1200, 475);
+    
+    bankrun.bankrunSteps = amountOfPlayers +1;
 
     //This variable makes it so that this screen doesn't get skipped
     //because of this variable you can't go to the next screen within the first 0.5 seconds (30 frames)
@@ -252,6 +256,7 @@ class Screens
 
   void screen10()
   {
+    bankrun.bankrunThisTurn = false;
     textSize(60);
     text("Biedronde over", width/2, height/5);
     textSize(40);
@@ -433,6 +438,7 @@ class Screens
     fill(0);
     text("Verzet het bankrunfiche één stap.", 500, 100);
     image(style.b10, 1200, 400, 200, 200);
+    if (bankrun.bankrunThisTurn == false) {bankrun.bankrunCount += 1; bankrun.bankrunThisTurn = true;}
     previous(16);
     next(23);
   }
@@ -443,6 +449,7 @@ class Screens
     background(255);
     fill(0);
     text("Verzet het bankrunfiche twéé stappen.", 500, 100);
+    if (bankrun.bankrunThisTurn == false) {bankrun.bankrunCount += 2; bankrun.bankrunThisTurn = true;}
     image(style.b20, 1200, 700, 200, 200);
     previous(16);
     next(23);
@@ -456,7 +463,6 @@ class Screens
     
     bankrun.bankrunThisTurn = false;
 
-    previous(16);
     next(8);
   }
   
@@ -465,5 +471,56 @@ class Screens
   {
     text("Verplaats het voorste bankrunfiche met 1 stap", width/2, height/5);
     next(8);
+  }
+  
+  void screen25()
+  {
+    count++;
+       fill(style.white);
+       textSize(80);
+    text("How many bankrunfiches?", width/2, height/6);
+    textSize(40);
+    text("The amount of fiches determines how long this game will take", width/2, height/4);
+    textSize(80);
+    rect(400, 500, 100, 100);
+    rect(800, 500, 100, 100);
+    rect(1200, 500, 100, 100);
+
+    fill(style.black);
+    text("3", 400, 525);
+    text("4", 800, 525);
+    text("5", 1200, 525);
+
+    if (overlaps(400, 500, 100, 100, mouseX, mouseY) && mousePressed && count > 15) {
+      screen = 3; 
+      bankrun.amountOfBankrunFiches = 3;
+      bankrunFichesSelected = true;
+      count = 0;
+    }
+    if (overlaps(800, 500, 100, 100, mouseX, mouseY) && mousePressed && count > 15) {
+      screen = 3; 
+      bankrun.amountOfBankrunFiches = 4;
+      bankrunFichesSelected = true;
+      count = 0;
+    }
+    if (overlaps(1200, 500, 100, 100, mouseX, mouseY) && mousePressed && count > 15) {
+      screen = 3; 
+      bankrun.amountOfBankrunFiches = 5;
+      bankrunFichesSelected = true;
+      count = 0;
+    }
+  }
+  
+  //Bankrun screen
+  void screen26()
+  {
+    bankrun.bankrun = false;
+    textSize(80);
+    text("Bankrun!", width/2, height/6);
+    textSize(50);
+    text("Verplaats 5 blokken van beide kleuren van de", width/2, height/3);
+    text("natuurlijke voorraad en vul deze aan in de markt", width/2, height/3 + 100);
+    
+    next(23);
   }
 }
