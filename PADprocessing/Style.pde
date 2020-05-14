@@ -35,6 +35,10 @@ class Style
   PImage b20;
   
   PImage bankrunfiche;
+  
+  PImage BagTip;
+  PImage BagJoke;
+  PImage BagFact;
 
   Style()
   {
@@ -71,5 +75,9 @@ class Style
     b20 = loadImage("content/20b.png");
     
     bankrunfiche = loadImage("content/bankrunfiche.png");
+    
+    //BagTip = loadImage("content/whisper.png");
+    //BagJoke = loadImage("content/laugh.png");
+    //BagFact = loadImage("content/shrug.png");
   }
 }
