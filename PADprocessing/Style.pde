@@ -77,7 +77,7 @@ class Style
     bankrunfiche = loadImage("content/bankrunfiche.png");
     
     BagTip = loadImage("content/whisper.png");
-    //BagJoke = loadImage("content/laugh.png");
-    //BagFact = loadImage("content/shrug.png");
+    BagJoke = loadImage("content/laugh.png");
+    BagFact = loadImage("content/shrug.png");
   }
 }
