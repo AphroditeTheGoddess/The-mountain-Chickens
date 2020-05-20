@@ -2,6 +2,7 @@ Screens screens;
 RoundCounter counter;
 Style style;
 Bankrun bankrun;
+GameEndingTracker gameEndingTracker;
 int screen = 1;
 int amountOfPlayers;
 int count;
@@ -13,6 +14,7 @@ void setup()
   style = new Style();
   counter = new RoundCounter();
   bankrun = new Bankrun();
+  gameEndingTracker = new GameEndingTracker();
   glossaryInit();
   textAlign(CENTER);
   rectMode(CENTER);
@@ -29,6 +31,7 @@ void draw()
   counter.Count();
 
   bankrun.bankrunTrigger();
+  bankrun.bankrunDisplay();
 
   glossaryHandler();
 
@@ -136,6 +139,10 @@ void draw()
 
   case 26:
     screens.screen26();
+    return;
+    
+  case 27:
+    screens.screen27();
     return;
   }
 }

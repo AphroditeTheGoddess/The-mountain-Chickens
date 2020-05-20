@@ -25,7 +25,8 @@ class Screens
   void screen2()
   {
     fill(style.white);
-    text("How many players?", width/2, height/5);
+    textSize(style.textSize);
+    text("Hoeveel spelers?", width/2, height/5);
     rect(400, 300, 100, 100);
     rect(1200, 300, 100, 100);
     rect(400, 600, 100, 100);
@@ -478,9 +479,9 @@ class Screens
     count++;
        fill(style.white);
        textSize(80);
-    text("How many bankrunfiches?", width/2, height/6);
+    text("Hoeveel bankrunfiches?", width/2, height/6);
     textSize(40);
-    text("The amount of fiches determines how long this game will take", width/2, height/4);
+    text("Het aantal bankrunfiches bepaald hoelang het spel gaat duren", width/2, height/4);
     textSize(80);
     rect(400, 500, 100, 100);
     rect(800, 500, 100, 100);
@@ -509,6 +510,7 @@ class Screens
       bankrunFichesSelected = true;
       count = 0;
     }
+    bankrun.bankrunFichesLeft = bankrun.amountOfBankrunFiches;
   }
   
   //Bankrun screen
@@ -522,5 +524,12 @@ class Screens
     text("natuurlijke voorraad en vul deze aan in de markt", width/2, height/3 + 100);
     
     next(23);
+  }
+  
+  void screen27()
+  {
+    textSize(80);
+    text("Game einde!", width/2, height/6);
+    textSize(50);
   }
 }

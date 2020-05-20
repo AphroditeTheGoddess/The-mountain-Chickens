@@ -35,6 +35,7 @@ class Style
   PImage b20;
   
   PImage bankrunfiche;
+  PImage bankruncoin;
 
   Style()
   {
@@ -71,5 +72,6 @@ class Style
     b20 = loadImage("content/20b.png");
     
     bankrunfiche = loadImage("content/bankrunfiche.png");
+    bankruncoin = loadImage("content/bankruncoin.png");
   }
 }
