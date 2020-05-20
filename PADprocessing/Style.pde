@@ -46,6 +46,7 @@ class Style
   
   PImage bankrunfiche;
   PImage klasse;
+  PImage bankruncoin;
   
   PImage BagTip;
   PImage BagJoke;
@@ -98,6 +99,7 @@ class Style
     
     bankrunfiche = loadImage("content/bankrunfiche.png");
     klasse = loadImage("content/klasse.png");
+    bankruncoin = loadImage("content/bankruncoin.png");
     
     BagTip = loadImage("content/whisper.png");
     BagJoke = loadImage("content/laugh.png");
