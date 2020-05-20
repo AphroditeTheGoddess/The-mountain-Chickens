@@ -17,6 +17,10 @@ class Style
   PImage screen14;
   PImage screen15;
   PImage screen16;
+  PImage screen31;
+  PImage screen35;
+  PImage screen50;
+  PImage screen51;
 
   PImage text1;
   PImage text2;
@@ -26,6 +30,9 @@ class Style
   PImage text6;
   PImage text7;
   PImage text8;
+  PImage text9;
+  PImage text10;
+  PImage text11;
   
   PImage r10;
   PImage r20;
@@ -33,8 +40,12 @@ class Style
   PImage g20;
   PImage b10;
   PImage b20;
+  PImage red;
+  PImage green;
+  PImage blue;
   
   PImage bankrunfiche;
+  PImage klasse;
   
   PImage BagTip;
   PImage BagJoke;
@@ -43,7 +54,7 @@ class Style
   Style()
   {
     textSize = 80;
-    backgroundColor = color(100, 200, 300);
+    backgroundColor = color(37, 116, 179);
     black = color(0);
     white = color(255);
 
@@ -57,6 +68,11 @@ class Style
     screen14 = loadImage("content/screen14.PNG");
     screen15 = loadImage("content/screen15.PNG");
     //screen16 = loadImage("content/screen16.PNG");
+    screen31 = loadImage("content/screen32.PNG");
+    screen35 = loadImage("content/screen35.PNG");
+    screen50 = loadImage("content/screen50.PNG");
+    screen51 = loadImage("content/screen51.PNG");
+    
 
     text1 = loadImage("content/text1.PNG");
     text2 = loadImage("content/text2.PNG");
@@ -66,6 +82,9 @@ class Style
     text6 = loadImage("content/text6.PNG");
     text7 = loadImage("content/text7.PNG");
     text8 = loadImage("content/text8.PNG");
+    text9 = loadImage("content/text9.PNG");
+    text10 = loadImage("content/text10.PNG");
+    text11 = loadImage("content/text11.PNG");
     
     r10 = loadImage("content/10r.png");
     r20 = loadImage("content/20r.png");
@@ -73,8 +92,12 @@ class Style
     g20 = loadImage("content/20g.png");
     b10 = loadImage("content/10b.png");
     b20 = loadImage("content/20b.png");
+    red = loadImage("content/red.png");
+    green = loadImage("content/green.png");
+    blue = loadImage("content/blue.png");
     
     bankrunfiche = loadImage("content/bankrunfiche.png");
+    klasse = loadImage("content/klasse.png");
     
     BagTip = loadImage("content/whisper.png");
     BagJoke = loadImage("content/laugh.png");
