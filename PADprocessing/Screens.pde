@@ -477,7 +477,8 @@ class Screens
   void screen24()
   {
     text("Verplaats het voorste bankrunfiche met 1 stap", width/2, height/5);
-    next(8);
+    if(version == 0) {next(8);}
+    if(version == 1) {next(36);}
   }
 
   void screen25()
@@ -548,23 +549,25 @@ class Screens
     text("4", 1200, 325);
     text("5", 400, 625);
     text("6", 1200, 625);
+    
+    count++;
 
-    if (overlaps(400, 300, 100, 100, mouseX, mouseY) && mousePressed) {
+    if (overlaps(400, 300, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 28; 
       amountOfPlayers = 3;
       playersSelected = true;
     }
-    if (overlaps(1200, 300, 100, 100, mouseX, mouseY) && mousePressed) {
+    if (overlaps(1200, 300, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 28; 
       amountOfPlayers = 4;
       playersSelected = true;
     }
-    if (overlaps(400, 600, 100, 100, mouseX, mouseY) && mousePressed) {
+    if (overlaps(400, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 28; 
       amountOfPlayers = 5;
       playersSelected = true;
     }
-    if (overlaps(1200, 600, 100, 100, mouseX, mouseY) && mousePressed) {
+    if (overlaps(1200, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 28; 
       amountOfPlayers = 6;
       playersSelected = true;
@@ -606,6 +609,7 @@ class Screens
       bankrunFichesSelected = true;
       count = 0;
     }
+    bankrun.bankrunFichesLeft = bankrun.amountOfBankrunFiches;
   }
   void screen29()
   {
@@ -908,6 +912,8 @@ class Screens
     text("Nee", 1100, height/2);
     fill(style.white);
     rectMode(CORNER);
+    
+    count++;
 
     if (overlaps(500, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 45; 
@@ -931,41 +937,42 @@ class Screens
     fill(0);
     text("Gooi nu een kredietdobbelsteen.", 500, 100);
     text("Waarop is je dobbelsteen geland?", 500, 200);
+    count++;
 
     //When you click on the dices, it will bring you to a page about that specific dice.
     //Red 10
     image(style.r10, 400, 400, 200, 200);
-    if (overlaps(400, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+    if (overlaps(400, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
     }
 
     //Red 20
     image(style.r20, 400, 700, 200, 200);
-    if (overlaps(400, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+    if (overlaps(400, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
     }
 
     //Green 10
     image(style.g10, 800, 400, 200, 200);
-    if (overlaps(800, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+    if (overlaps(800, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 48;
     }
 
     //Green 20
     image(style.g20, 800, 700, 200, 200);
-    if (overlaps(800, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+    if (overlaps(800, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 48;
     }
 
     //Blue 10
     image(style.b10, 1200, 400, 200, 200);
-    if (overlaps(1200, 400, 200, 200, mouseX, mouseY) && mousePressed) {
-      screen = 49;
+    if (overlaps(1200, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 57;
     }
 
     //Blue 20
     image(style.b20, 1200, 700, 200, 200);    
-    if (overlaps(1200, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+    if (overlaps(1200, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 49;
     }
 
@@ -1045,7 +1052,7 @@ class Screens
     imageMode(CENTER);
     textSize(style.textSize);
     text("Krediet klasse omhoog", width/2, height/5);
-    textSize(60);
+    textSize(50);
     text("Door je schulden af te lossen ga je een krediet klasse omhoog", width/2, 300);
     image(style.klasse, width/2, height-131);
 
@@ -1076,11 +1083,13 @@ class Screens
     if (overlaps(400, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 2; 
       count = 0;
+      version = 0;
     }
     //Button for 'volledig spel'
     if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 27/*up to change @Pepijn :P*/;
       count = 0;
+      version = 1;
     }
   }
 
@@ -1091,5 +1100,19 @@ class Screens
     textSize(80);
     text("Game einde!", width/2, height/6);
     textSize(50);
+  }
+  
+  void screen57()
+  {
+    textSize(40);
+    text("Hoeveel spelers hebben 10 of meer krediet op de getroffen huizenblokken?", width/2, height/4);
+    
+    for(int i = 0; i <= amountOfPlayers; i++)
+    {
+      rect((width/amountOfPlayers) * i + (width/amountOfPlayers)/2, height/2, 100, 100);
+      fill(style.black);
+      text(i, (width/amountOfPlayers) * i + (width/amountOfPlayers)/2, height/2);
+      fill(style.white);
+    }
   }
 }

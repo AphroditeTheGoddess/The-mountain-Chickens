@@ -6,6 +6,8 @@ GameEndingTracker gameEndingTracker;
 int screen = 1;
 int amountOfPlayers;
 int count;
+// 0 voor beginners versie, 1 voor volledige versie.
+int version;
 //uwu
 void setup()
 {
@@ -259,6 +261,10 @@ void draw()
     
   case 56:
     screens.screen56();
+    return;
+    
+  case 57:
+    screens.screen57();
     return;
   }
 }
