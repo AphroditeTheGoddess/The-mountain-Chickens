@@ -266,6 +266,10 @@ void draw()
   case 57:
     screens.screen57();
     return;
+  
+  case 58:
+    screens.screen58();
+    return;
   }
 }
 
@@ -310,7 +314,8 @@ void next(int nextScreen)
   count++;
   if (bankrun.bankrun)
   {
-    screen = 26;
+    if(version == 0) {screen = 26;}
+    if(version == 1) {screen = 58;}
     return;
   }
   if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 20)

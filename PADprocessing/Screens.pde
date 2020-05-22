@@ -1115,4 +1115,31 @@ class Screens
       fill(style.white);
     }
   }
+  
+  void screen58()
+  {
+    bankrun.bankrun = false;
+    textSize(80);
+    text("Bankrun!", width/2, height/6);
+    textSize(50);
+    text("Gooi de wijkendobbelsteen", width/2, height/3);
+    textSize(35);
+    text("Van de huizenblokken met het geworpen symbool moet al het krediet worden afgelost", width/2, height/3 + 100);
+    text("Stap 1: bepaal hoeveel krediet afgelost moet worden", width/2, height/3 + 140);
+    text("Stap 2: Betaal dat aantal met goud aan de centrale bank", width/2, height/3 + 180);
+    text("Stap 3: Als een speler niet genoeg geld heeft om te kunnen aflossen, ga onderhandelen", width/2, height/3 + 220);
+    text("Stap 4: Als er geen deal gemaakt wordt degradeerd deze speler", width/2, height/3 + 260);
+    text("Voor elke speler die degradeerd wordt het bankrunfiche met 2 stappen verplaatst", width/2, height/3 + 300);
+    text("Hoeveel spelers zijn er gedegradeerd?", width/2, height/3 + 375);
+    
+        for(int i = 0; i <= amountOfPlayers; i++)
+    {
+      rect((width/amountOfPlayers) * i + (width/amountOfPlayers)/2, 800, 100, 100);
+      fill(style.black);
+      text(i, (width/amountOfPlayers) * i + (width/amountOfPlayers)/2, 800);
+      fill(style.white);
+    }
+
+    next(52);
+  }
 }
