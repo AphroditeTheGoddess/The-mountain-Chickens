@@ -12,7 +12,7 @@ class GameEndingTracker
     if (bankrun.bankrunFichesLeft <= 0)
     {
       gameFinished = true;
-      screen = 27;
+      screen = 56;
     }
   }
 }

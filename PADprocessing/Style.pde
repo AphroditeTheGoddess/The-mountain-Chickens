@@ -93,12 +93,12 @@ class Style
     g20 = loadImage("content/20g.png");
     b10 = loadImage("content/10b.png");
     b20 = loadImage("content/20b.png");
-    red = loadImage("content/red.png");
-    green = loadImage("content/green.png");
-    blue = loadImage("content/blue.png");
+    red = loadImage("content/red.PNG");
+    green = loadImage("content/green.PNG");
+    blue = loadImage("content/blue.PNG");
     
     bankrunfiche = loadImage("content/bankrunfiche.png");
-    klasse = loadImage("content/klasse.png");
+    klasse = loadImage("content/klasse.PNG");
     bankruncoin = loadImage("content/bankruncoin.png");
     
     BagTip = loadImage("content/whisper.png");

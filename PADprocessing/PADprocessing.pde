@@ -140,9 +140,125 @@ void draw()
   case 26:
     screens.screen26();
     return;
-    
+
   case 27:
     screens.screen27();
+    return;
+    
+  case 28:
+    screens.screen28();
+    return;
+    
+  case 29:
+    screens.screen29();
+    return;
+
+  case 30:
+    screens.screen30();
+    return;
+
+  case 31:
+    screens.screen31();
+    return;
+
+  case 32:
+    screens.screen32();
+    return;
+
+  case 33:
+    screens.screen33();
+    return;
+
+  case 34:
+    screens.screen34();
+    return;
+
+  case 35:
+    screens.screen35();
+    return;
+
+  case 36:
+    screens.screen36();
+    return;
+
+  case 37:
+    screens.screen37();
+    return;
+
+  case 38:
+    screens.screen38();
+    return;
+
+  case 39:
+    screens.screen39();
+    return;
+
+  case 40:
+    screens.screen40();
+    return;
+
+  case 41:
+    screens.screen41();
+    return;
+
+  case 42:
+    screens.screen42();
+    return;
+
+  case 43:
+    screens.screen43();
+    return;
+
+  case 44:
+    screens.screen44();
+    return;
+
+  case 45:
+    screens.screen45();
+    return;
+
+  case 46:
+    screens.screen46();
+    return;
+
+  case 47:
+    screens.screen47();
+    return;
+
+  case 48:
+    screens.screen48();
+    return;
+
+  case 49:
+    screens.screen49();
+    return;
+
+  case 50:
+    screens.screen50();
+    return;
+
+  case 51:
+    screens.screen51();
+    return;
+
+  case 52:
+    screens.screen52();
+    return;
+
+  case 53:
+    screens.screen53();
+    return;
+
+  case 54:
+    screens.screen54();
+    return;
+
+  case 55:
+    screens.screen55();
+    return;
+    
+  case 56:
+    screens.screen56();
     return;
   }
 }
