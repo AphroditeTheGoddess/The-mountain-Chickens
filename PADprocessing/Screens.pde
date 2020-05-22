@@ -926,47 +926,86 @@ class Screens
   void screen46()
   {
     imageMode(CENTER);
-    background(255);
     fill(0);
-    text("Gooi nu een kredietdobbelsteen.", 500, 100);
-    text("Waarop is je dobbelsteen geland?", 500, 200);
+    text("Er zijn twéé typen dobbelstenen.", 1100, 100);
+    text("Gooi één wijk en één krediet dobbelsteen.", 1100, 150);
+    text("(Na de derde bankrun komt er nog één wijk dobbelsteen bij.)", 800, 200);
+    text("Krediet:", 400, 275);
+    text("Wijk:", 1050, 275);
+
     count++;
 
     //When you click on the dices, it will bring you to a page about that specific dice.
     //Red 10
-    image(style.r10, 400, 400, 200, 200);
-    if (overlaps(400, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.r10, 100, 400, 200, 200);
+    if (overlaps(100, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
     }
 
     //Red 20
-    image(style.r20, 400, 700, 200, 200);
-    if (overlaps(400, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.r20, 100, 700, 200, 200);
+    if (overlaps(100, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
     }
 
     //Green 10
-    image(style.g10, 800, 400, 200, 200);
-    if (overlaps(800, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.g10, 325, 400, 200, 200);
+    if (overlaps(325, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 48;
     }
 
     //Green 20
-    image(style.g20, 800, 700, 200, 200);
-    if (overlaps(800, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.g20, 325, 700, 200, 200);
+    if (overlaps(325, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 48;
     }
 
     //Blue 10
-    image(style.b10, 1200, 400, 200, 200);
-    if (overlaps(1200, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.b10, 550, 400, 200, 200);
+    if (overlaps(550, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 57;
     }
 
     //Blue 20
-    image(style.b20, 1200, 700, 200, 200);    
-    if (overlaps(1200, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.b20, 550, 700, 200, 200);    
+    if (overlaps(550, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 49;
+    }
+    
+    //Molen
+    image(style.molen, 1000, 400, 200, 200);
+    if (overlaps(1000, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 57;
+    }
+    
+    //Boot
+    image(style.boot, 1000, 700, 200, 200);
+    if (overlaps(1000, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 57;
+    }
+    
+    //Vis
+    image(style.vis, 1225, 400, 200, 200);
+    if (overlaps(1225, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 57;
+    }
+    
+    //Wiel
+    image(style.wiel, 1225, 700, 200, 200);
+    if (overlaps(1225, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 57;
+    }
+    
+    //Bakstenen
+    image(style.bakstenen, 1450, 400, 200, 200);
+    if (overlaps(1450, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 57;
+    }
+    
+    //Bloem
+    image(style.bloem, 1450,700, 200, 200);
+    if (overlaps(1450, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 57;
     }
 
     next(50);

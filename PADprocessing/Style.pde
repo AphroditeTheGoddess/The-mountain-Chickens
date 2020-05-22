@@ -44,6 +44,8 @@ class Style
   PImage green;
   PImage blue;
   
+  PImage boot, molen, vis, wiel, bakstenen, bloem;
+  
   PImage bankrunfiche;
   PImage klasse;
   PImage bankruncoin;
@@ -96,6 +98,13 @@ class Style
     red = loadImage("content/red.PNG");
     green = loadImage("content/green.PNG");
     blue = loadImage("content/blue.PNG");
+    
+    boot = loadImage("content/Boot.png");
+    molen = loadImage("content/Molen.png");
+    vis = loadImage("content/Vis.png");
+    wiel = loadImage("content/Wiel.png");
+    bakstenen = loadImage("content/Bakstenen.png");
+    bloem = loadImage("content/Bloem.png");
     
     bankrunfiche = loadImage("content/bankrunfiche.png");
     klasse = loadImage("content/klasse.PNG");
