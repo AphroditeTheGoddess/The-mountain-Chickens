@@ -290,7 +290,7 @@ void previous(int previousScreen)
 {
   rectMode(CENTER);
   fill(style.white);
-  rect(100, 865, 100, 50);
+  image(style.linkerPijl, 100, 865, 100, 50);
   count++;
   if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
   {
@@ -306,7 +306,7 @@ void next(int nextScreen)
 {
   rectMode(CENTER);
   fill(style.white);
-  rect(1500, 865, 100, 50);
+  image(style.rechterPijl, 1500, 865, 100, 50);
   count++;
   if (bankrun.bankrun)
   {

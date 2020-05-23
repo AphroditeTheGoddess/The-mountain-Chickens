@@ -53,6 +53,9 @@ class Style
   PImage BagTip;
   PImage BagJoke;
   PImage BagFact;
+  
+  PImage rechterPijl;
+  PImage linkerPijl;
 
   Style()
   {
@@ -113,5 +116,8 @@ class Style
     BagTip = loadImage("content/whisper.png");
     BagJoke = loadImage("content/laugh.png");
     BagFact = loadImage("content/shrug.png");
+    
+    rechterPijl = loadImage("content/rechterpijl.png");
+    linkerPijl = loadImage("content/linkerpijl.png");
   }
 }
