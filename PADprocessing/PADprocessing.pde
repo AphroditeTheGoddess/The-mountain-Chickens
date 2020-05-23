@@ -3,6 +3,7 @@ RoundCounter counter;
 Style style;
 Bankrun bankrun;
 GameEndingTracker gameEndingTracker;
+Glossary glossary;
 int screen = 1;
 int amountOfPlayers;
 int count;
@@ -17,7 +18,7 @@ void setup()
   counter = new RoundCounter();
   bankrun = new Bankrun();
   gameEndingTracker = new GameEndingTracker();
-  glossaryInit();
+  glossary = new Glossary();
   textAlign(CENTER);
   rectMode(CENTER);
 }
@@ -35,7 +36,7 @@ void draw()
   bankrun.bankrunTrigger();
   bankrun.bankrunDisplay();
 
-  glossaryHandler();
+  glossary.glossaryUpdateDraw();
 
   switch(screen)
   {
