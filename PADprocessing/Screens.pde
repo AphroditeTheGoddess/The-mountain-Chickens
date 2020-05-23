@@ -342,7 +342,6 @@ class Screens
   void screen16()
   {
     imageMode(CENTER);
-    fill(0);
     text("Gooi nu een kredietdobbelsteen.", 1000, 100);
     text("Waarop is je dobbelsteen geland?", 1000, 200);
 
@@ -390,7 +389,6 @@ class Screens
   void screen17()
   {
     imageMode(CENTER);
-    fill(0);
     text("Haal één blokje uit de productiemarkt.", 1000, 100);
     image(style.r10, 400, 400, 200, 200);
     previous(16);
@@ -400,7 +398,6 @@ class Screens
   void screen18()
   {
     imageMode(CENTER);
-    fill(0);
     text("Haal twéé blokjes uit de productiemarkt.", 1000, 100);
     image(style.r20, 400, 700, 200, 200);
     previous(16);
@@ -410,7 +407,6 @@ class Screens
   void screen19()
   {
     imageMode(CENTER);
-    fill(0);
     text("Haal één blokje uit de consumptiemarkt.", 1000, 100);    
     image(style.g10, 800, 400, 200, 200);
     previous(16);
@@ -420,7 +416,6 @@ class Screens
   void screen20()
   {
     imageMode(CENTER);
-    fill(0);
     text("Haal twéé blokjes uit de consumptiemarkt.", 1000, 100);
     image(style.g20, 800, 700, 200, 200);
     previous(16);
@@ -430,7 +425,6 @@ class Screens
   void screen21()
   {
     imageMode(CENTER);
-    fill(0);
     text("Verzet het bankrunfiche één stap.", 1000, 100);
     image(style.b10, 1200, 400, 200, 200);
     if (bankrun.bankrunThisTurn == false) {
@@ -444,7 +438,6 @@ class Screens
   void screen22()
   {
     imageMode(CENTER);
-    fill(0);
     text("Verzet het bankrunfiche twéé stappen.", 1000, 100);
     if (bankrun.bankrunThisTurn == false) {
       bankrun.bankrunCount += 2; 
@@ -926,96 +919,157 @@ class Screens
   void screen46()
   {
     imageMode(CENTER);
-    background(255);
-    fill(0);
-    text("Gooi nu een kredietdobbelsteen.", 500, 100);
-    text("Waarop is je dobbelsteen geland?", 500, 200);
+    fill(255);
+    text("Er zijn twéé typen dobbelstenen.", 1100, 100);
+    text("Gooi één wijk en één krediet dobbelsteen.", 1100, 150);
+    text("(Na de derde bankrun komt er nog één wijk dobbelsteen bij.)", 800, 200);
+    text("Krediet:", 400, 275);
+    text("Wijk:", 1050, 275);
+
     count++;
+    
+    previous(44);
 
     //When you click on the dices, it will bring you to a page about that specific dice.
     //Red 10
-    image(style.r10, 400, 400, 200, 200);
-    if (overlaps(400, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.r10, 100, 400, 200, 200);
+    if (overlaps(100, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
     }
 
     //Red 20
-    image(style.r20, 400, 700, 200, 200);
-    if (overlaps(400, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.r20, 100, 700, 200, 200);
+    if (overlaps(100, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
     }
 
     //Green 10
-    image(style.g10, 800, 400, 200, 200);
-    if (overlaps(800, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.g10, 325, 400, 200, 200);
+    if (overlaps(325, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 48;
     }
 
     //Green 20
-    image(style.g20, 800, 700, 200, 200);
-    if (overlaps(800, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.g20, 325, 700, 200, 200);
+    if (overlaps(325, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 48;
     }
 
     //Blue 10
-    image(style.b10, 1200, 400, 200, 200);
-    if (overlaps(1200, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.b10, 550, 400, 200, 200);
+    if (overlaps(550, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 57;
     }
 
     //Blue 20
-    image(style.b20, 1200, 700, 200, 200);    
-    if (overlaps(1200, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    image(style.b20, 550, 700, 200, 200);    
+    if (overlaps(550, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 49;
     }
+    
+    //Molen
+    image(style.molen, 1000, 400, 200, 200);
+    if (overlaps(1000, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 50;
+    }
+    
+    //Boot
+    image(style.boot, 1000, 700, 200, 200);
+    if (overlaps(1000, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 50;
+    }
+    
+    //Vis
+    image(style.vis, 1225, 400, 200, 200);
+    if (overlaps(1225, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 50;
+    }
+    
+    //Wiel
+    image(style.wiel, 1225, 700, 200, 200);
+    if (overlaps(1225, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 50;
+    }
+    
+    //Bakstenen
+    image(style.bakstenen, 1450, 400, 200, 200);
+    if (overlaps(1450, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 50;
+    }
+    
+    //Bloem
+    image(style.bloem, 1450,700, 200, 200);
+    if (overlaps(1450, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 50;
+    }
 
-    next(50);
   }
   void screen47()
   {
     imageMode(CENTER);
-    background(255);
-    fill(0);
-    text("Rood", 500, 100);
-    image(style.red, width/2, height/2);
+    text("Bij rood 10:", 800, 200);
+    text("Tel het aantal spelers met 10 of meer krediet", 800, 250);
+    text("op de getroffen huizenblokken.", 800, 300);
+    text("Bij rood 20:", 800, 375);
+    text("Tel het aantal spelers met 20 of meer krediet", 800, 425);
+    text("op de getroffen huizenblokken.", 800, 475);
+    
+    text("Verwijder vervolgens dezelfde hoeveelheid", 800, 600);
+    text("goederen uit de bedrijfsmarkt (rood) en voeg", 800, 650);
+    text("deze toe aan de Natuurlijke Voorraad.", 800, 700);
     previous(46);
     next(50);
   }
   void screen48()
   {
     imageMode(CENTER);
-    background(255);
-    fill(0);
-    text("Groen", 500, 100);
-    image(style.green, width/2, height/2);
+    text("Bij groen 10:", 800, 200);
+    text("Tel het aantal spelers met 10 of meer krediet", 800, 250);
+    text("op de getroffen huizenblokken.", 800, 300);
+    text("Bij groen 20:", 800, 375);
+    text("Tel het aantal spelers met 20 of meer krediet", 800, 425);
+    text("op de getroffen huizenblokken.", 800, 475);
+    
+    text("Verwijder vervolgens dezelfde hoeveelheid", 800, 600);
+    text("goederen uit de consumentenmarkt (groen) en voeg", 800, 650);
+    text("deze toe aan de Natuurlijke Voorraad.", 800, 700);
     previous(46);
     next(50);
   }
   void screen49()
   {
-    imageMode(CENTER);
-    background(255);
-    fill(0);
-    text("Blauw", 500, 100);
-    image(style.blue, width/2, height/2);
+    text("Bij blauw 10:", 800, 200);
+    text("Tel het aantal spelers met 10 of meer krediet", 800, 250);
+    text("op de getroffen huizenblokken.", 800, 300);
+    text("Bij blauw 20:", 800, 375);
+    text("Tel het aantal spelers met 20 of meer krediet", 800, 425);
+    text("op de getroffen huizenblokken.", 800, 475);
+    
+    text("Verschuif vervolgens het eerstvolgende bankrunfiche", 800, 600);
+    text("hetzelfde aantal keer. Als het bankrunfiche de bankruncirkel", 800, 650);
+    text("bereikt volgt direct een bankrun. Overige stappen vervallen.", 800, 700);
     previous(46);
     next(50);
   }
   void screen50()
   {
     imageMode(CENTER);
-    background(255);
-    fill(0);
-    image(style.screen50, width/2, height/2);
+    fill(255);
+    text("Dit zijn bij de molen de getroffen wijken.", 800, 200);
+    text("Op alle huizenblokken waar de molen staat afgebeeld,", 800, 750);
+    text("zal de krediet dobbelsteen effect hebben.", 800, 800);
+    image(style.screen50, width/2, 450);
     previous(46);
     next(51);
   }
   void screen51()
   {
     imageMode(CENTER);
-    background(255);
-    fill(0);
-    image(style.screen51, width/2, height/2);
+    fill(255);
+    text("Voorbeeld van een worp:", 800, 150);
+    text("4 spelers hebben 10 of meer krediet op deze huizenblokken.", 800, 775);
+    text("4 goederen moeten van bedrijfsmarkt naar Natuurlijke Voorraad.", 800, 825);
+    image(style.screen51, width/2, 450);
     previous(50);
     next(52);
   }
@@ -1026,7 +1080,7 @@ class Screens
     text("Klik door om naar het begin van het stappenplan te gaan", width/2, 500);
 
     bankrun.bankrunThisTurn = false;
-
+    previous(46);
     next(36);
   }
 

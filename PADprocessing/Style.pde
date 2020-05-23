@@ -44,6 +44,8 @@ class Style
   PImage green;
   PImage blue;
   
+  PImage boot, molen, vis, wiel, bakstenen, bloem;
+  
   PImage bankrunfiche;
   PImage klasse;
   PImage bankruncoin;
@@ -51,6 +53,9 @@ class Style
   PImage BagTip;
   PImage BagJoke;
   PImage BagFact;
+  
+  PImage rechterPijl;
+  PImage linkerPijl;
 
   Style()
   {
@@ -97,6 +102,13 @@ class Style
     green = loadImage("content/green.PNG");
     blue = loadImage("content/blue.PNG");
     
+    boot = loadImage("content/Boot.png");
+    molen = loadImage("content/Molen.png");
+    vis = loadImage("content/Vis.png");
+    wiel = loadImage("content/Wiel.png");
+    bakstenen = loadImage("content/Bakstenen.png");
+    bloem = loadImage("content/Bloem.png");
+    
     bankrunfiche = loadImage("content/bankrunfiche.png");
     klasse = loadImage("content/klasse.PNG");
     bankruncoin = loadImage("content/bankruncoin.png");
@@ -104,5 +116,8 @@ class Style
     BagTip = loadImage("content/whisper.png");
     BagJoke = loadImage("content/laugh.png");
     BagFact = loadImage("content/shrug.png");
+    
+    rechterPijl = loadImage("content/rechterpijl.png");
+    linkerPijl = loadImage("content/linkerpijl.png");
   }
 }
