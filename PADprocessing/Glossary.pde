@@ -113,9 +113,9 @@ class Glossary
     case GLOSSARY_INVISIBLE:
       break;
     }
-    fill (style.black);
+    /*fill (style.black);
     text (currentElement, 100, 100);
-    fill(style.white);
+    fill(style.white);*/
   }
 
   void iconSelector(int arrayIndex) { //this function supplies the glossary objects with the right icons
