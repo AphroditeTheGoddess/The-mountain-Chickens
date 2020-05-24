@@ -3,6 +3,7 @@ RoundCounter counter;
 Style style;
 Bankrun bankrun;
 GameEndingTracker gameEndingTracker;
+Glossary glossary;
 int screen = 1;
 int amountOfPlayers;
 int count;
@@ -17,7 +18,7 @@ void setup()
   counter = new RoundCounter();
   bankrun = new Bankrun();
   gameEndingTracker = new GameEndingTracker();
-  glossaryInit();
+  glossary = new Glossary();
   textAlign(CENTER);
   rectMode(CENTER);
 }
@@ -35,7 +36,7 @@ void draw()
   bankrun.bankrunTrigger();
   bankrun.bankrunDisplay();
 
-  glossaryHandler();
+  glossary.glossaryUpdateDraw();
 
   switch(screen)
   {
@@ -266,6 +267,10 @@ void draw()
   case 57:
     screens.screen57();
     return;
+  
+  case 58:
+    screens.screen58();
+    return;
   }
 }
 
@@ -290,7 +295,7 @@ void previous(int previousScreen)
 {
   rectMode(CENTER);
   fill(style.white);
-  rect(100, 865, 100, 50);
+  image(style.linkerPijl, 100, 865, 100, 50);
   count++;
   if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
   {
@@ -306,11 +311,12 @@ void next(int nextScreen)
 {
   rectMode(CENTER);
   fill(style.white);
-  rect(1500, 865, 100, 50);
+  image(style.rechterPijl, 1500, 865, 100, 50);
   count++;
   if (bankrun.bankrun)
   {
-    screen = 26;
+    if(version == 0) {screen = 26;}
+    if(version == 1) {screen = 58;}
     return;
   }
   if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
