@@ -37,26 +37,32 @@ class Screens
     text("4", 1200, 325);
     text("5", 400, 625);
     text("6", 1200, 625);
+    
+    count++;
 
-    if (overlaps(400, 300, 100, 100, mouseX, mouseY) && mousePressed) {
+    if (overlaps(400, 300, 100, 100, mouseX, mouseY) && mousePressed && count > 20) {
       screen = 25; 
       amountOfPlayers = 3;
       playersSelected = true;
+      count = 0;
     }
-    if (overlaps(1200, 300, 100, 100, mouseX, mouseY) && mousePressed) {
+    if (overlaps(1200, 300, 100, 100, mouseX, mouseY) && mousePressed && count > 20) {
       screen = 25; 
       amountOfPlayers = 4;
       playersSelected = true;
+      count = 0;
     }
-    if (overlaps(400, 600, 100, 100, mouseX, mouseY) && mousePressed) {
+    if (overlaps(400, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 20) {
       screen = 25; 
       amountOfPlayers = 5;
       playersSelected = true;
+      count = 0;
     }
-    if (overlaps(1200, 600, 100, 100, mouseX, mouseY) && mousePressed) {
+    if (overlaps(1200, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 20) {
       screen = 25; 
       amountOfPlayers = 6;
       playersSelected = true;
+      count = 0;
     }
   }
 
@@ -85,6 +91,7 @@ class Screens
     //Button for 'start spel'
     if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 7;
+      count = 0;
     }
   }
 
@@ -542,21 +549,25 @@ class Screens
       screen = 28; 
       amountOfPlayers = 3;
       playersSelected = true;
+      count = 0;
     }
     if (overlaps(1200, 300, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 28; 
       amountOfPlayers = 4;
       playersSelected = true;
+      count = 0;
     }
     if (overlaps(400, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 28; 
       amountOfPlayers = 5;
       playersSelected = true;
+      count = 0;
     }
     if (overlaps(1200, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 28; 
       amountOfPlayers = 6;
       playersSelected = true;
+      count = 0;
     }
   }
   void screen28()
@@ -622,6 +633,7 @@ class Screens
     //Button for 'start spel'
     if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
       screen = 34;
+      count = 0;
     }
   }
   void screen30()
@@ -935,72 +947,84 @@ class Screens
     image(style.r10, 100, 400, 200, 200);
     if (overlaps(100, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
+      count = 0;
     }
 
     //Red 20
     image(style.r20, 100, 700, 200, 200);
     if (overlaps(100, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
+      count = 0;
     }
 
     //Green 10
     image(style.g10, 325, 400, 200, 200);
     if (overlaps(325, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 48;
+      count = 0;
     }
 
     //Green 20
     image(style.g20, 325, 700, 200, 200);
     if (overlaps(325, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 48;
+      count = 0;
     }
 
     //Blue 10
     image(style.b10, 550, 400, 200, 200);
     if (overlaps(550, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 57;
+      count = 0;
     }
 
     //Blue 20
     image(style.b20, 550, 700, 200, 200);    
     if (overlaps(550, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 49;
+      count = 0;
     }
     
     //Molen
     image(style.molen, 1000, 400, 200, 200);
     if (overlaps(1000, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 50;
+      count = 0;
     }
     
     //Boot
     image(style.boot, 1000, 700, 200, 200);
     if (overlaps(1000, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 50;
+      count = 0;
     }
     
     //Vis
     image(style.vis, 1225, 400, 200, 200);
     if (overlaps(1225, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 50;
+      count = 0;
     }
     
     //Wiel
     image(style.wiel, 1225, 700, 200, 200);
     if (overlaps(1225, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 50;
+      count = 0;
     }
     
     //Bakstenen
     image(style.bakstenen, 1450, 400, 200, 200);
     if (overlaps(1450, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 50;
+      count = 0;
     }
     
     //Bloem
     image(style.bloem, 1450,700, 200, 200);
     if (overlaps(1450, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 50;
+      count = 0;
     }
 
   }
@@ -1038,18 +1062,24 @@ class Screens
   }
   void screen49()
   {
-    text("Bij blauw 10:", 800, 200);
-    text("Tel het aantal spelers met 10 of meer krediet", 800, 250);
-    text("op de getroffen huizenblokken.", 800, 300);
-    text("Bij blauw 20:", 800, 375);
-    text("Tel het aantal spelers met 20 of meer krediet", 800, 425);
-    text("op de getroffen huizenblokken.", 800, 475);
-    
-    text("Verschuif vervolgens het eerstvolgende bankrunfiche", 800, 600);
-    text("hetzelfde aantal keer. Als het bankrunfiche de bankruncirkel", 800, 650);
-    text("bereikt volgt direct een bankrun. Overige stappen vervallen.", 800, 700);
-    previous(46);
-    next(50);
+    count++;
+    textSize(40);
+    text("Hoeveel spelers hebben 20 of meer krediet op de getroffen huizenblokken?", width/2, height/4);
+    int amountOfRects = amountOfPlayers + 1;
+    for(int i = 0; i <= amountOfRects; i++)
+    {
+      rect((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100);
+      fill(style.black);
+      text(i, (width/amountOfRects) * i + (width/amountOfRects)/2, height/2);
+      fill(style.white);
+      
+      if(mousePressed && overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100, mouseX, mouseY) && count > 20)
+      {
+        bankrun.bankrunCount += 2*i;
+        screen = 50;
+        count = 0;
+      }
+    }
   }
   void screen50()
   {
@@ -1146,25 +1176,38 @@ class Screens
   {
     textSize(80);
     text("Game einde!", width/2, height/6);
+    textSize(60);
+    text("Gebruik het scoreblok om de winnaar te bepalen", width/2, height/4);
+    image(style.scoreblok, width/2, height/1.6, style.scoreblok.width/1.5, style.scoreblok.height/1.5);
     textSize(50);
   }
   
+  //Scherm voor dobbelsteen blauwe 10 (volledige versie)
   void screen57()
   {
+    count++;
     textSize(40);
     text("Hoeveel spelers hebben 10 of meer krediet op de getroffen huizenblokken?", width/2, height/4);
-    
-    for(int i = 0; i <= amountOfPlayers; i++)
+    int amountOfRects = amountOfPlayers + 1;
+    for(int i = 0; i <= amountOfRects; i++)
     {
-      rect((width/amountOfPlayers) * i + (width/amountOfPlayers)/2, height/2, 100, 100);
+      rect((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100);
       fill(style.black);
-      text(i, (width/amountOfPlayers) * i + (width/amountOfPlayers)/2, height/2);
+      text(i, (width/amountOfRects) * i + (width/amountOfRects)/2, height/2);
       fill(style.white);
+      
+      if(mousePressed && overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100, mouseX, mouseY) && count > 20)
+      {
+        bankrun.bankrunCount += 2*i;
+        screen = 50;
+        count = 0;
+      }
     }
   }
   
   void screen58()
   {
+    count++;
     bankrun.bankrun = false;
     textSize(80);
     text("Bankrun!", width/2, height/6);
@@ -1175,18 +1218,24 @@ class Screens
     text("Stap 1: bepaal hoeveel krediet afgelost moet worden", width/2, height/3 + 140);
     text("Stap 2: Betaal dat aantal met goud aan de centrale bank", width/2, height/3 + 180);
     text("Stap 3: Als een speler niet genoeg geld heeft om te kunnen aflossen, ga onderhandelen", width/2, height/3 + 220);
-    text("Stap 4: Als er geen deal gemaakt wordt degradeerd deze speler", width/2, height/3 + 260);
+    text("Stap 4: Als een speler na het onderhandelen niet alle krediet kan afbetalen, degradeerd deze", width/2, height/3 + 260);
     text("Voor elke speler die degradeerd wordt het bankrunfiche met 2 stappen verplaatst", width/2, height/3 + 300);
     text("Hoeveel spelers zijn er gedegradeerd?", width/2, height/3 + 375);
     
-        for(int i = 0; i <= amountOfPlayers; i++)
+    int amountOfRects = amountOfPlayers + 1;
+        for(int i = 0; i <= amountOfRects; i++)
     {
-      rect((width/amountOfPlayers) * i + (width/amountOfPlayers)/2, 800, 100, 100);
+      rect((width/amountOfRects) * i + (width/amountOfRects)/2, 800, 100, 100);
       fill(style.black);
-      text(i, (width/amountOfPlayers) * i + (width/amountOfPlayers)/2, 800);
+      text(i, (width/amountOfRects) * i + (width/amountOfRects)/2, 800);
       fill(style.white);
+      
+      if(mousePressed && overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, 800, 100, 100, mouseX, mouseY) && count > 20)
+      {
+        bankrun.bankrunCount += 2*i;
+        screen = 52;
+        count = 0;
+      }
     }
-
-    next(52);
   }
 }

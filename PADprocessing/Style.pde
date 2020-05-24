@@ -56,6 +56,8 @@ class Style
   
   PImage rechterPijl;
   PImage linkerPijl;
+  
+  PImage scoreblok;
 
   Style()
   {
@@ -119,5 +121,7 @@ class Style
     
     rechterPijl = loadImage("content/rechterpijl.png");
     linkerPijl = loadImage("content/linkerpijl.png");
+    
+    scoreblok = loadImage("content/scoreblok.PNG");
   }
 }
