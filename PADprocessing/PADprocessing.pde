@@ -8,7 +8,7 @@ int amountOfPlayers;
 int count;
 // 0 voor beginners versie, 1 voor volledige versie.
 int version;
-//uwu
+
 void setup()
 {
   size(1650, 900);
