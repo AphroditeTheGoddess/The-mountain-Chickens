@@ -68,13 +68,13 @@ class Style
 
     screen4 = loadImage("content/screen4.PNG");
     screen6 = loadImage("content/screen6.PNG");
-    screen7 = loadImage("content/screen7.PNG");
+    screen7 = loadImage("content/screen7.png");
     screen9 = loadImage("content/screen9.PNG");
     screen11 = loadImage("content/screen11.PNG");
-    screen12 = loadImage("content/screen12.PNG");
-    screen13 = loadImage("content/screen13.PNG");
-    screen14 = loadImage("content/screen14.PNG");
-    screen15 = loadImage("content/screen15.PNG");
+    screen12 = loadImage("content/screen12.png");
+    screen13 = loadImage("content/screen13.png");
+    screen14 = loadImage("content/screen14.png");
+    screen15 = loadImage("content/screen15.png");
     //screen16 = loadImage("content/screen16.PNG");
     screen31 = loadImage("content/screen32.PNG");
     screen35 = loadImage("content/screen35.PNG");
