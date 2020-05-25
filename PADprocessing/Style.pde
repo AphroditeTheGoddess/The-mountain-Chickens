@@ -63,16 +63,16 @@ class Style
     black = color(0);
     white = color(255);
 
-    screen4 = loadImage("content/screen4.png");
-    screen6 = loadImage("content/screen6.png");
-    screen7 = loadImage("content/screen7.png");
-    screen12 = loadImage("content/screen12.png");
-    screen13 = loadImage("content/screen13.png");
-    screen14 = loadImage("content/screen14.png");
-    screen15 = loadImage("content/screen15.png");
+    screen4 = loadImage("content/screen4.PNG");
+    screen6 = loadImage("content/screen6.PNG");
+    screen7 = loadImage("content/screen7.PNG");
+    screen12 = loadImage("content/screen12.PNG");
+    screen13 = loadImage("content/screen13.PNG");
+    screen14 = loadImage("content/screen14.PNG");
+    screen15 = loadImage("content/screen15.PNG");
     screen31 = loadImage("content/screen31.png");
-    screen50 = loadImage("content/screen50.png");
-    screen51 = loadImage("content/screen51.png");
+    screen50 = loadImage("content/screen50.PNG");
+    screen51 = loadImage("content/screen51.PNG");
     
 
     text1 = loadImage("content/text1.PNG");
