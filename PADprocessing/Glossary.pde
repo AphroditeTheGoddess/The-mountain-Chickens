@@ -154,39 +154,62 @@ class Glossary
     case 0: //bankrun
       text("Bankruns", width/2, height/8);
       image(style.BagJoke, 300, height/2, 500, 500);
+      text("Je mag gewoon blijven zitten hoor", 0, 0);
       break;
     case 1: //wijk dobbelsteen
       text("Wijk dobbelsteen", width/2, height/8);
+      image(style.BagFact, 300, height/2, 500, 500);
+      text("Amsterdam dateerd helemaal terug naar de 16e eeuw", 0, 0);
       break;
     case 2: //krediet dobbelsteen
       text("Krediet dobbelsteen", width/2, height/8);
+      image(style.BagTip, 300, height/2, 500, 500);
+      text("Als je rustig gooit kun je misschien de uitkomst bepalen", 0, 0);
       break;
     case 3: //productie
       text("Productie", width/2, height/8);
+      image(style.BagTip, 300, height/2, 500, 500);
+      text("Later in het spel stijgen de prijzen van productie goederen erg snel, wacht niet te lang!", 0, 0);
       break;
     case 4: //consumptie
       text("Consumptie", width/2, height/8);
+      image(style.BagFact, 300, height/2, 500, 500);
+      text("Het duurste eten dat je kunt kopen is Japans Kobe vlees van 1000 euro per kilo", 0, 0);
       break;
     case 5: //goud
       text("Goud", width/2, height/8);
+      image(style.BagFact, 300, height/2, 500, 500);
+      text("Ongeveer 80% van het totale aantal goud op aarde is al gedolven door de mensheid", 0, 0);
       break;
     case 6: //krediet
       text("Krediet", width/2, height/8);
+      image(style.BagTip, 300, height/2, 500, 500);
+      text("Als je niet met krediet hoeft te betalen zou ik dat ook niet doen", 0, 0);
       break;
     case 7: //bank
       text("De Bank", width/2, height/8);
+      image(style.BagFact, 300, height/2, 500, 500);
+      text("Het woord 'bank' is een voorbeeld van een homoniem, een woord met meerdere betekenissen", 0, 0);
       break;
     case 8: //actie kaart
       text("Actie Kaarten", width/2, height/8);
+      image(style.BagTip, 300, height/2, 500, 500);
+      text("Met actie kaarten kan je het hele spel omgooien", 0, 0);
       break;
     case 9: //financierings kaart
       text("Financierings Kaarten", width/2, height/8);
+      image(style.BagFact, 300, height/2, 500, 500);
+      text("Het oudste bedrijf van Nederland is een bierbrouwerij in Wijlre: de Koninklijke Brand Bierbrouwerij BV. Al sinds 1340 is deze brouwer actief.", 0, 0);
       break;
     case 10: //gilde
       text("Gilde", width/2, height/8);
+      image(style.BagFact, 300, height/2, 500, 500);
+      text("Een gilde is een belangenorganisatie voor mensen die in dezelfde beroepsgroep werken.", 0, 0);
       break;
     case 11: //gevangenis
       text("Gevangenis", width/2, height/8);
+      image(style.BagJoke, 300, height/2, 500, 500);
+      text("Zebras zijn eigenlijk paarden die ontsnapt zijn uit de gevangenis", 0, 0);
       break;
     }
   }
