@@ -100,6 +100,7 @@ class Screens
     imageMode(CENTER);
     image(style.screen4, width/2, height/2, 1600, 900);
 
+    previous(3);
     next(5);
   }
 
@@ -225,8 +226,8 @@ class Screens
     text("In dit voorbeeld zijn het 2 goederen van de productiemarkt,", 800, 400);
     text("verplaatst daarom 2 goederen naar de Natuurlijke Voorraad.", 800, 450);    
 
-    text("De prijs van een blok correspondeert", 1100, 550);
-    text("met de schaal waar het blok in ligt.", 1100, 600);
+    text("De prijs van een goed correspondeert", 1100, 550);
+    text("met de schaal waar het goed in ligt.", 1100, 600);
     text("In dit voorbeeld is het start bod van", 1100, 700);
     text("de kaart dus 5 goud.", 1100, 750);
 
@@ -270,7 +271,7 @@ class Screens
 
   void screen9()
   {
-    imageMode(CENTER);
+    textMode(CENTER);
     text("Bied minimaal het start bod.", 800, 200);
     text("Nu mogen alle spelers willekeurig hoger bieden,", 800, 250);
     text("de speler met het hoogste bod koopt de kaart.", 800, 300);
@@ -354,7 +355,7 @@ class Screens
     text("Al je kaarten kunnen 1x", 1000, 300);
     text("produceren in jouw beurt.", 1000, 350);
     
-    text("Het aantal blokjes dat geproduceerd", 1000, 400);
+    text("Het aantal goederen dat geproduceerd", 1000, 400);
     text("wordt staat onderaan de kaart.", 1000, 450);
 
     text("Haal de geproduceerde goederen uit", 1000, 550);
@@ -467,7 +468,7 @@ class Screens
   void screen17()
   {
     imageMode(CENTER);
-    text("Haal één blokje uit de productiemarkt.", 1000, 100);
+    text("Haal één goed uit de productiemarkt.", 1000, 100);
     image(style.r10, 400, 400, 200, 200);
     previous(16);
     next(23);
@@ -476,7 +477,7 @@ class Screens
   void screen18()
   {
     imageMode(CENTER);
-    text("Haal twéé blokjes uit de productiemarkt.", 1000, 100);
+    text("Haal twéé goederen uit de productiemarkt.", 1000, 100);
     image(style.r20, 400, 700, 200, 200);
     previous(16);
     next(23);
@@ -485,7 +486,7 @@ class Screens
   void screen19()
   {
     imageMode(CENTER);
-    text("Haal één blokje uit de consumptiemarkt.", 1000, 100);    
+    text("Haal één goed uit de consumptiemarkt.", 1000, 100);    
     image(style.g10, 800, 400, 200, 200);
     previous(16);
     next(23);
@@ -494,7 +495,7 @@ class Screens
   void screen20()
   {
     imageMode(CENTER);
-    text("Haal twéé blokjes uit de consumptiemarkt.", 1000, 100);
+    text("Haal twéé goederen uit de consumptiemarkt.", 1000, 100);
     image(style.g20, 800, 700, 200, 200);
     previous(16);
     next(23);
@@ -591,8 +592,8 @@ class Screens
     textSize(80);
     text("Bankrun!", width/2, height/6);
     textSize(50);
-    text("Verplaats 5 blokken van beide kleuren van de", width/2, height/3);
-    text("natuurlijke voorraad en vul deze aan in de markt", width/2, height/3 + 100);
+    text("Verplaats 5 goederen van beide kleuren van de", width/2, height/3);
+    text("Natuurlijke Voorraad en vul deze aan in de markt", width/2, height/3 + 100);
 
     next(23);
   }
@@ -712,6 +713,7 @@ class Screens
     imageMode(CENTER);
     image(style.screen4, width/2, height/2, 1600, 900);
 
+    previous(29);
     next(31);
   }
   void screen31()
@@ -719,6 +721,7 @@ class Screens
     imageMode(CENTER);
     image(style.screen31, width/2, height/2, 1600, 900);
 
+    previous(30);
     next(32);
   }
   void screen32()
@@ -828,7 +831,8 @@ class Screens
       image(style.text10, mouseX, mouseY-203);
       imageMode(CENTER);
     }
-
+    
+    previous(32);
     next(29);
   }
   void screen34() 
@@ -842,13 +846,27 @@ class Screens
     text("de speler die het meest heeft geboden krijgt de eerste beurt,", width/2, 700);
     text("maar is dus wel al goud of krediet kwijt.", width/2, 800);
 
+    previous(29);
     next(35);
   }
   void screen35()
   {
     imageMode(CENTER);
-    image(style.screen35, width/2, height/2, 1600, 900);
+    image(style.screen7, 300, 700, 650, 400);
+    text("Draai een financieringskaart om en kies", 800, 150);
+    text("of je op een kaart wilt bieden of niet.", 800, 200);
 
+    text("Rechts bovenin de foto zie je de hoeveelheid goederen", 800, 300);
+    text("die het bedrijf zoekt ter investering.", 800, 350);
+    text("In dit voorbeeld zijn het 2 goederen van de productiemarkt,", 800, 400);
+    text("verplaatst daarom 2 goederen naar de Natuurlijke Voorraad.", 800, 450);    
+
+    text("De prijs van een goed correspondeert", 1100, 550);
+    text("met de schaal waar het goed in ligt.", 1100, 600);
+    text("In dit voorbeeld is het start bod van", 1100, 700);
+    text("de kaart dus 5 goud.", 1100, 750);
+
+    previous(34);
     next(36);
   }
   void screen36()
@@ -882,12 +900,25 @@ class Screens
       screen = 53; 
       count = 0;
     }
+    
+    previous(35);
   }
   void screen37()
   {
     imageMode(CENTER);
-    image(style.screen9, width/2, height/2, 1600, 900);
+    text("Bied minimaal het start bod.", 800, 200);
+    text("Nu mogen alle spelers willekeurig hoger bieden,", 800, 250);
+    text("de speler met het hoogste bod koopt de kaart.", 800, 300);
 
+    text("Goud komt in de goudreserve.", 800, 400);
+
+    text("Als de speler die aan de beurt is niet het hoogste bod", 800, 500);
+    text("heeft gedaan, mag hij/zij op een andere kaart bieden,", 800, 550);
+    text("als er nog een openligt. Als er geen kaarten meer open-", 800, 600);
+    text("liggen of als je kiest om niet te bieden is de biedronde", 800, 650);
+    text("over.", 800, 700);
+
+    previous(36);
     next(38);
   }
   void screen38()
@@ -930,25 +961,55 @@ class Screens
     if (overlaps(1500, 50, 100, 50, mouseX, mouseY) && mousePressed) {
       screen = 44;
     }
+    
+    previous(37);
   }
   void screen39()
   {
-    imageMode(CENTER);
-    image(style.screen11, width/2, height/2, 1600, 900);
+    textMode(CENTER);
+    text("KOPEN", 800, 200);
+    
+    text("Je mag elke beurt maximaal 4 goederen per markt kopen,", 800, 300);
+    text("de prijs van de goederen is gelijk aan de schaal waar", 800, 350);
+    text("ze zich in bevinden.", 800, 400);
+    
+    text("Als de markt leeg is, haal de goederen uit de Natuurlijke", 800, 500);
+    text("Voorraad, deze kosten 9 goud per goed.", 800, 550);
+
+    text("Bepaal de kosten van de goederen die je wilt kopen en", 800, 650);
+    text("betaal dit aantal goud aan de goudreserve.", 800, 700);
 
     next(38);
   }
   void screen40()
   {
     imageMode(CENTER);
-    image(style.screen12, width/2, height/2, 1600, 900);
+    image(style.screen12, 300, 550);
+    
+    text("PRODUCEREN", 900, 200);
+    text("Al je kaarten kunnen 1x", 1000, 300);
+    text("produceren in jouw beurt.", 1000, 350);
+    
+    text("Het aantal goederen dat geproduceerd", 1000, 400);
+    text("wordt staat onderaan de kaart.", 1000, 450);
+
+    text("Haal de geproduceerde goederen uit", 1000, 550);
+    text("de Natuurlijke Voorraad van de", 1000, 600);
+    text("betreffende markt.", 1000, 650);
 
     next(41);
   }
   void screen41()
   {
     imageMode(CENTER);
-    image(style.screen13, width/2, height/2, 1600, 900);
+    image(style.screen13, 300, 550);
+    
+    text("PRODUCEREN", 900, 200);
+    text("Met een handelskaart kan je een", 1000, 300);
+    text("aantal goederen omruilen met een", 1000, 350);
+    text("andere markt. Aantal op de kaart", 1000, 400);
+    text("is verplicht, maar gebruik van de", 1000, 450);
+    text("kaart niet.", 1000, 500);
 
     previous(40);
     next(42);
@@ -956,7 +1017,15 @@ class Screens
   void screen42()
   {
     imageMode(CENTER);
-    image(style.screen14, width/2, height/2, 1600, 900);
+    image(style.screen14, 225, 500);
+    
+    text("PRODUCEREN", 900, 200);
+    text("Wanneer je 2 of meer kaarten van dezelfde", 1000, 300);
+    text("gilde in je bezit hebt produceert elke", 1000, 350);
+    text("kaart van deze gilde, per beurt, één extra goed.", 1000, 400);
+    
+    text("Handelskaarten geven een extra goed", 1000, 550);
+    text("van de al gekozen uitvoer.", 1000, 600);
 
     previous(41);
     next(38);
@@ -964,7 +1033,19 @@ class Screens
   void screen43()
   {
     imageMode(CENTER);
-    image(style.screen15, width/2, height/2, 1600, 900);
+    image(style.screen15, 300, 550);
+    
+    text("VERKOPEN", 900, 200);
+    text("In deze fase kun je kiezen om al je goederen te verkopen.", 800, 300);
+    
+    text("Plaats de goederen die je wilt", 1000, 400);
+    text("verkopen terug in de markten.", 1000, 450);
+    text("De verkoopprijs wordt bepaald", 1000, 500);
+    text("door de schaal van de markt.", 1000, 550);
+    
+    text("Als de markt vol worden goed-", 1000, 650);
+    text("eren verkocht voor 1 goud, deze", 1000, 700);
+    text("komen in de Natuurlijke Voorraad.", 1000, 750);
 
     next(38);
   }
@@ -992,12 +1073,15 @@ class Screens
       screen = 46; 
       count = 0;
     }
+    
+    previous(54);
   }
   void screen45()
   {
     text("Betaal 10 goud of krediet", width/2, height/2);
 
     next(46);
+    previous(44);
   }
   void screen46()
   {
@@ -1193,6 +1277,7 @@ class Screens
     text("Je kunt je krediet aflossen door te betalen met goud", width/2, 300);
     text("of het krediet van een kredietwaardige speler.", width/2, 400);
 
+    previous(36);
     next(54);
   }
   void screen54()
@@ -1204,6 +1289,7 @@ class Screens
     text("Door je schulden af te lossen ga je een krediet klasse omhoog", width/2, 300);
     image(style.klasse, width/2, height-131);
 
+    previous(53);
     next(44);
   }
   //einde volledige spel 

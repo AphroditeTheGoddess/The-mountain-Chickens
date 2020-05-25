@@ -10,15 +10,12 @@ class Style
   PImage screen4;
   PImage screen6;
   PImage screen7;
-  PImage screen9;
   PImage screen11;
   PImage screen12;
   PImage screen13;
   PImage screen14;
   PImage screen15;
-  PImage screen16;
   PImage screen31;
-  PImage screen35;
   PImage screen50;
   PImage screen51;
 
@@ -66,20 +63,16 @@ class Style
     black = color(0);
     white = color(255);
 
-    screen4 = loadImage("content/screen4.PNG");
-    screen6 = loadImage("content/screen6.PNG");
+    screen4 = loadImage("content/screen4.png");
+    screen6 = loadImage("content/screen6.png");
     screen7 = loadImage("content/screen7.png");
-    screen9 = loadImage("content/screen9.PNG");
-    screen11 = loadImage("content/screen11.PNG");
     screen12 = loadImage("content/screen12.png");
     screen13 = loadImage("content/screen13.png");
     screen14 = loadImage("content/screen14.png");
     screen15 = loadImage("content/screen15.png");
-    //screen16 = loadImage("content/screen16.PNG");
-    screen31 = loadImage("content/screen32.PNG");
-    screen35 = loadImage("content/screen35.PNG");
-    screen50 = loadImage("content/screen50.PNG");
-    screen51 = loadImage("content/screen51.PNG");
+    screen31 = loadImage("content/screen31.png");
+    screen50 = loadImage("content/screen50.png");
+    screen51 = loadImage("content/screen51.png");
     
 
     text1 = loadImage("content/text1.PNG");
@@ -100,9 +93,6 @@ class Style
     g20 = loadImage("content/20g.png");
     b10 = loadImage("content/10b.png");
     b20 = loadImage("content/20b.png");
-    red = loadImage("content/red.PNG");
-    green = loadImage("content/green.PNG");
-    blue = loadImage("content/blue.PNG");
     
     boot = loadImage("content/Boot.png");
     molen = loadImage("content/Molen.png");
