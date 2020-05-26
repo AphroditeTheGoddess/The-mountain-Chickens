@@ -11,7 +11,7 @@ final int GLOSSARY_OBJECT_OBJECTSPERCOLUMN = 3;
 final int GLOSSARY_OBJECT_WH = 100;
 final int GLOSSARY_ELEMENT_TEXT_XOFFSET = width - width / 3;
 final int AVATAR_XPOS = 200;
-final int AVATAR_YPOS = height - height/4;
+final int AVATAR_YPOS = /*height - height/4*/ height/2;
 
 
 class Glossary
@@ -81,7 +81,8 @@ class Glossary
   }
 
   void drawGlossary() {
-    fill(style.white);
+    fill(7, 53, 90);
+
 
     switch (glossaryState) {
     case GLOSSARY_OPENING:
@@ -103,9 +104,10 @@ class Glossary
       break;
 
     case GLOSSARY_OPEN:
+      textSize(style.textSize);
       rect(theButtonXpos, theButtonYpos, glossarySizeX, glossarySizeY);
       image(style.linkerPijl, 100, 865, 100, 50);
-      fill(style.black);
+      fill(style.white);
       text("Regelboekje", width/2, height/8);
       fill(style.white);
       for (int i = 0; i < GLOSSARY_OBJECT_COLUMNS; i++) {
@@ -131,7 +133,7 @@ class Glossary
   }
 
   void iconSelector(int arrayIndex) { //this function supplies the glossary objects with the right icons
-  imageMode(CORNER);
+    imageMode(CORNER);
 
     switch (arrayIndex) {
     case 0: //bankrun fiche plaatje
@@ -167,76 +169,111 @@ class Glossary
     fill(style.black);
     switch (arrayIndex) {
     case 0: //bankrun
+      fill(style.white);
+      textSize(style.textSize);
       text("Bankruns", width/2, height/8);
-      image(style.BagJoke, 200, AVATAR_YPOS, 500, 500);
-      text("Je mag gewoon blijven zitten hoor.", 0, 0);
+      image(style.BagJoke, 250, height/2, 500, 500);
+      textSize(16);
+      text("Je mag gewoon blijven zitten hoor.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 1: //dobbelstenen
+      fill(style.white);
+      textSize(style.textSize);
       text("Dobbelstenen", width/2, height/8);
-      image(style.BagTip, 200, AVATAR_YPOS, 500, 500);
-      text("Als je rustig gooit kun je misschien de uitkomst bepalen.", 0, 0);
+      image(style.BagTip, 250, height/2, 500, 500);
+      textSize(16);
+      text("Als je rustig gooit kun je misschien de uitkomst bepalen.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 2: //promoveren/degraderen
-      text("Kredietklasse", width/2, height/8);
-      image(style.BagTip, 200, AVATAR_YPOS, 500, 500);
-      text("Als je je schulden niet kunt betalen tijdens een bankrun beland je in de gevangenis.", 0, 0);
+      fill(style.white);
+      textSize(style.textSize);
+      text("Promoveren en Degraderen", width/2, height/8);
+      image(style.BagTip, 250, height/2, 500, 500);
+      textSize(16);
+      text("Als je je schulden niet kunt betalen tijdens een bankrun beland je in de gevangenis.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 3: //productie/consumptie
-      text("Productie", width/2, height/8);
-      image(style.BagTip, 200, AVATAR_YPOS, 500, 500);
-      text("Later in het spel stijgen de prijzen van goederen erg snel, wacht niet te lang!", 0, 0);
+      fill(style.white);
+      textSize(style.textSize);
+      text("Productie en Consumptie", width/2, height/8);
+      image(style.BagFact, 250, height/2, 500, 500);
+      textSize(16);
+      text("Het duurste eten dat je kunt kopen is Japans Kobe vlees van 1000 euro per kilo.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 4: //Kopen/Verkopen
-      text("Placeholder", width/2, height/8);
-      image(style.BagFact, 200, AVATAR_YPOS, 500, 500);
-      text("Het duurste eten dat je kunt kopen is Japans Kobe vlees van 1000 euro per kilo.", 0, 0);
+      fill(style.white);
+      textSize(style.textSize);
+      text("Kopen en Verkopen", width/2, height/8);
+      image(style.BagTip, 250, height/2, 500, 500);
+      textSize(16);
+      text("Later in het spel veranderen de prijzen van goederen erg snel, wacht niet te lang!", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 5: //goud
+      fill(style.white);
+      textSize(style.textSize);
       text("Goud", width/2, height/8);
-      image(style.BagFact, 200, AVATAR_YPOS, 500, 500);
-      text("Ongeveer 80% van het totale aantal goud op aarde is al gedolven door de mensheid.", 0, 0);
+      image(style.BagFact, 250, height/2, 500, 500);
+      textSize(16);
+      text("Ongeveer 80% van het totale aantal goud op aarde is al gedolven door de mensheid.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 6: //krediet
+      fill(style.white);
+      textSize(style.textSize);
       text("Krediet", width/2, height/8);
-      image(style.BagTip, 200, AVATAR_YPOS, 500, 500);
-      text("Als je niet met krediet hoeft te betalen zou ik dat ook niet doen.", 0, 0);
+      image(style.BagTip, 250, height/2, 500, 500);
+      textSize(16);
+      text("Als je niet met krediet hoeft te betalen zou ik dat ook niet doen.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 7: //bank
+      fill(style.white);
+      textSize(style.textSize);
       text("De Bank", width/2, height/8);
-      image(style.BagFact, 200, AVATAR_YPOS, 500, 500);
-      text("Het woord 'bank' is een voorbeeld van een homoniem, een woord met meerdere betekenissen.", 0, 0);
+      image(style.BagFact, 250, height/2, 500, 500);
+      textSize(16);
+      text("Het woord 'bank' is een voorbeeld van een homoniem, een woord met meerdere betekenissen.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 8: //actie kaart
+      fill(style.white);
+      textSize(style.textSize);
       text("Actie Kaarten", width/2, height/8);
-      image(style.BagTip, 200, AVATAR_YPOS, 500, 500);
-      text("Met actie kaarten kun je het hele spel omgooien.", 0, 0);
+      image(style.BagTip, 250, height/2, 500, 500);
+      textSize(16);
+      text("Met actie kaarten kun je het hele spel omgooien.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 9: //financierings kaart
+      fill(style.white);
+      textSize(style.textSize);
       text("Financierings Kaarten", width/2, height/8);
-      image(style.BagFact, 200, AVATAR_YPOS, 500, 500);
-      text("Het oudste bedrijf van Nederland is een bierbrouwerij in Wijlre: de Koninklijke Brand Bierbrouwerij BV. Al sinds 1340 is deze brouwer actief.", 0, 0);
+      image(style.BagFact, 250, height/2, 500, 500);
+      textSize(16);
+      text("Het oudste bedrijf van Nederland is een bierbrouwerij in Wijlre:\n de Koninklijke Brand Bierbrouwerij BV. Al sinds 1340 is deze brouwer actief.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 10: //gilde
+      fill(style.white);
+      textSize(style.textSize);
       text("Gilde", width/2, height/8);
-      image(style.BagFact, 200, AVATAR_YPOS, 500, 500);
-      text("Een gilde is een belangenorganisatie voor mensen die in dezelfde beroepsgroep werken.", 0, 0);
+      image(style.BagFact, 250, height/2, 500, 500);
+      textSize(16);
+      text("Een gilde is een belangenorganisatie voor mensen die in dezelfde beroepsgroep werken.", 500, 200);
       text("placeholder", (width / 3) * 2, height/2);
       break;
     case 11: //gevangenis
+      fill(style.white);
+      textSize(style.textSize);
       text("Gevangenis", width/2, height/8);
-      image(style.BagJoke, 200, AVATAR_YPOS, 500, 500);
+      image(style.BagJoke, 250, height/2, 500, 500);
       textSize(16);
-      text("Zebras zijn eigenlijk paarden die ontsnapt zijn uit de gevangenis.", 0, 0);
+      text("Zebras zijn eigenlijk paarden die ontsnapt zijn uit de gevangenis.", 500, 200);
       text("Als je degradeerd naar de gevangenis (zie degraderen/promoveren voor meer uitleg) blijf je in het spel, maar kun je minder dingen doen.\n Tijdens jouw beurt mag je alle normale beurtopties uitvoeren behalve bieden op fanancieringkaarten.\n Al het goud/krediet wat je verdient in de beurt moet direct gebruikt worden om schulden te betalen.\nAls al je schulden zijn betaald promoveer je weer naar kredietklasse I\nAls je in de gevangenis zit en je je schulden niet kunt betalen tijdens een bankrun ga je failliet en is het spel voor jou over.", (width / 3) * 2, height/2);
       break;
     }
