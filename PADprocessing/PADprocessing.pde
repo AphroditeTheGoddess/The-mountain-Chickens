@@ -272,6 +272,14 @@ void draw()
     case 58:
       screens.screen58();
       return;
+      
+    case 59:
+      screens.screen59();
+      return;
+      
+    case 60:
+      screens.screen60();
+      return;
     }
   }
 }
@@ -299,7 +307,7 @@ void previous(int previousScreen)
   fill(style.white);
   image(style.linkerPijl, 100, 865, 100, 50);
   count++;
-  if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
+  if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 40)
   {
     screen = previousScreen;
     count = 0;
@@ -325,7 +333,7 @@ void next(int nextScreen)
     }
     return;
   }
-  if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 20)
+  if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 40)
   {
     screen = nextScreen;
     count = 0;

@@ -6,6 +6,7 @@ class Screens
 {
   Boolean playersSelected;
   Boolean bankrunFichesSelected;
+  int stappen = 0;
   Screens()
   {
     playersSelected = false;
@@ -1070,11 +1071,11 @@ class Screens
       count = 0;
     }
     if (overlaps(1100, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
-      screen = 46; 
+      screen = 60; 
       count = 0;
     }
     
-    previous(54);
+    previous(38);
   }
   void screen45()
   {
@@ -1085,7 +1086,7 @@ class Screens
   }
   void screen46()
   {
-    imageMode(CENTER);
+    /*imageMode(CENTER);
     fill(255);
     text("Er zijn twéé typen dobbelstenen.", 1100, 100);
     text("Gooi één wijk en één krediet dobbelsteen.", 1100, 150);
@@ -1181,6 +1182,50 @@ class Screens
       screen = 50;
       count = 0;
     }
+    */
+    
+    imageMode(CENTER);
+    text("Gooi nu een kredietdobbelsteen.", 1000, 100);
+    text("Waarop is je dobbelsteen geland?", 1000, 200);
+
+    //When you click on the dices, it will bring you to a page about that specific dice.
+    //Red 10
+    image(style.r10, 400, 400, 200, 200);
+    if (overlaps(400, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 47;
+    }
+
+    //Red 20
+    image(style.r20, 400, 700, 200, 200);
+    if (overlaps(400, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 47;
+    }
+
+    //Green 10
+    image(style.g10, 800, 400, 200, 200);
+    if (overlaps(800, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 48;
+    }
+
+    //Green 20
+    image(style.g20, 800, 700, 200, 200);
+    if (overlaps(800, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 48;
+    }
+
+    //Blue 10
+    image(style.b10, 1200, 400, 200, 200);
+    if (overlaps(1200, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 57;
+    }
+
+    //Blue 20
+    image(style.b20, 1200, 700, 200, 200);    
+    if (overlaps(1200, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+      screen = 49;
+    }
+
+    previous(44);
 
   }
   void screen47()
@@ -1223,6 +1268,7 @@ class Screens
     int amountOfRects = amountOfPlayers + 1;
     for(int i = 0; i <= amountOfRects; i++)
     {
+      fill(style.white);
       rect((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100);
       fill(style.black);
       text(i, (width/amountOfRects) * i + (width/amountOfRects)/2, height/2);
@@ -1348,15 +1394,17 @@ class Screens
     int amountOfRects = amountOfPlayers + 1;
     for(int i = 0; i <= amountOfRects; i++)
     {
+      fill(style.white);
       rect((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100);
       fill(style.black);
       text(i, (width/amountOfRects) * i + (width/amountOfRects)/2, height/2);
       fill(style.white);
       
-      if(mousePressed && overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100, mouseX, mouseY) && count > 20)
+      if(mousePressed && overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100, mouseX, mouseY) && count > 40)
       {
+        stappen = i;
         bankrun.bankrunCount += 2*i;
-        screen = 50;
+        screen = 59;
         count = 0;
       }
     }
@@ -1394,5 +1442,17 @@ class Screens
         count = 0;
       }
     }
+  }
+  
+  void screen59()
+  {
+    text("Verplaats het bankrunfiche met " + stappen + " stappen", width/2, height/2);
+    next(52);
+  }
+  
+  void screen60()
+  {
+    text("Gooi een wijkendobbelsteen", width/2, height/2);
+    next(46);
   }
 }
