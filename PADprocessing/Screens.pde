@@ -1430,6 +1430,7 @@ class Screens
     int amountOfRects = amountOfPlayers + 1;
         for(int i = 0; i <= amountOfRects; i++)
     {
+      fill(style.white);
       rect((width/amountOfRects) * i + (width/amountOfRects)/2, 800, 100, 100);
       fill(style.black);
       text(i, (width/amountOfRects) * i + (width/amountOfRects)/2, 800);
