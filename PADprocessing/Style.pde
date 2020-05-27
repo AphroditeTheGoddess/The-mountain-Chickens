@@ -82,7 +82,7 @@ class Style
     screen13 = loadImage("content/screen13.PNG");
     screen14 = loadImage("content/screen14.PNG");
     screen15 = loadImage("content/screen15.PNG");
-    screen31 = loadImage("content/screen31.png");
+    screen31 = loadImage("content/screen31.PNG");
     screen50 = loadImage("content/screen50.PNG");
     screen51 = loadImage("content/screen51.PNG");
 

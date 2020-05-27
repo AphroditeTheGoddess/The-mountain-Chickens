@@ -1071,11 +1071,11 @@ class Screens
       count = 0;
     }
     if (overlaps(1100, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
-      screen = 60; 
+      screen = 46; 
       count = 0;
     }
     
-    previous(38);
+    previous(54);
   }
   void screen45()
   {
@@ -1086,18 +1086,19 @@ class Screens
   }
   void screen46()
   {
-    /*imageMode(CENTER);
+    imageMode(CENTER);
     fill(255);
     text("Er zijn twéé typen dobbelstenen.", 1100, 100);
-    text("Gooi één wijk en één krediet dobbelsteen.", 1100, 150);
+    text("Gooi eerst een wijkdobbelsteen.", 1100, 150);
     text("(Na de derde bankrun komt er nog één wijk dobbelsteen bij.)", 800, 200);
-    text("Krediet:", 400, 275);
+    text("Wat heb je gegooid?", 400, 575);
     text("Wijk:", 1050, 275);
 
     count++;
     
     previous(44);
 
+    /*
     //When you click on the dices, it will bring you to a page about that specific dice.
     //Red 10
     image(style.r10, 100, 400, 200, 200);
@@ -1137,9 +1138,10 @@ class Screens
     //Blue 20
     image(style.b20, 550, 700, 200, 200);    
     if (overlaps(550, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
-      screen = 49;
+      screen = 57;
       count = 0;
     }
+    */
     
     //Molen
     image(style.molen, 1000, 400, 200, 200);
@@ -1182,8 +1184,7 @@ class Screens
       screen = 50;
       count = 0;
     }
-    */
-    
+    /*
     imageMode(CENTER);
     text("Gooi nu een kredietdobbelsteen.", 1000, 100);
     text("Waarop is je dobbelsteen geland?", 1000, 200);
@@ -1194,7 +1195,7 @@ class Screens
     if (overlaps(400, 400, 200, 200, mouseX, mouseY) && mousePressed) {
       screen = 47;
     }
-
+    
     //Red 20
     image(style.r20, 400, 700, 200, 200);
     if (overlaps(400, 700, 200, 200, mouseX, mouseY) && mousePressed) {
@@ -1224,7 +1225,7 @@ class Screens
     if (overlaps(1200, 700, 200, 200, mouseX, mouseY) && mousePressed) {
       screen = 49;
     }
-
+    */
     previous(44);
 
   }
@@ -1302,7 +1303,7 @@ class Screens
     text("4 goederen moeten van bedrijfsmarkt naar Natuurlijke Voorraad.", 800, 825);
     image(style.screen51, width/2, 450);
     previous(50);
-    next(52);
+    next(60);
   }
   void screen52()
   {
@@ -1453,7 +1454,56 @@ class Screens
   
   void screen60()
   {
-    text("Gooi een wijkendobbelsteen", width/2, height/2);
-    next(46);
+    imageMode(CENTER);
+    fill(255);
+    text("Gooi nu een kredietdobbelsteen.", 1100, 150);
+    text("Wat heb je gegooid?", 1100, 200);
+    text("Krediet:", 500, 275);
+    
+    //When you click on the dices, it will bring you to a page about that specific dice.
+    //Red 10
+    image(style.r10, 300, 400, 200, 200);
+    if (overlaps(100, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 47;
+      count = 0;
+    }
+
+    //Red 20
+    image(style.r20, 300, 700, 200, 200);
+    if (overlaps(100, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 47;
+      count = 0;
+    }
+
+    //Green 10
+    image(style.g10, 525, 400, 200, 200);
+    if (overlaps(525, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 48;
+      count = 0;
+    }
+
+    //Green 20
+    image(style.g20, 525, 700, 200, 200);
+    if (overlaps(525, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 48;
+      count = 0;
+    }
+
+    //Blue 10
+    image(style.b10, 750, 400, 200, 200);
+    if (overlaps(750, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 57;
+      count = 0;
+    }
+
+    //Blue 20
+    image(style.b20, 750, 700, 200, 200);    
+    if (overlaps(750, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      screen = 57;
+      count = 0;
+    }
+    
+    next(52);
+    previous(46);
   }
 }
