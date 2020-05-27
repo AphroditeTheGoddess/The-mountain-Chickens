@@ -9,6 +9,7 @@ final int GLOSSARY_OBJECT_AMOUNT = 12;
 final int GLOSSARY_OBJECT_COLUMNS = 4;
 final int GLOSSARY_OBJECT_OBJECTSPERCOLUMN = 3;
 final int GLOSSARY_OBJECT_WH = 100;
+
 final int GLOSSARY_ELEMENT_TEXT_XOFFSET = width - width / 3;
 final int AVATAR_XPOS = 200;
 final int AVATAR_YPOS = /*height - height/4*/ height/2;
@@ -16,14 +17,21 @@ final int GLOSSARY_OPENBUTTON_XPOS = width - 250;
 final int GLOSSARY_OPENBUTTON_YPOS = 250;
 
 
+
 class Glossary
 {
+
   int glossaryPosXpos;
   int glossaryPosYpos;
+
+  int theButtonXpos;
+  int theButtonYpos;
+
   int glossarySizeX;
   int glossarySizeY;
   int glossaryState;
   int currentElement;
+
   int navigationTimer;
 
   Glossary() { //constructor for the glossary
@@ -33,6 +41,7 @@ class Glossary
     glossarySizeX = 50;
     currentElement = -1;
     navigationTimer = 0;
+
     glossarySizeY = height;
   }
 
@@ -44,20 +53,34 @@ class Glossary
   }
 
   void glossaryPosCheck() { //function that checks whether or not the button to display the glossary has been clicked
+
     navigationTimer--;
+
     if (glossaryState == GLOSSARY_OPEN && mouseX < 50 && mousePressed == true)
     {
       currentElement = -1;
       glossaryState = GLOSSARY_DORMENT;
     }
+
     if (mouseX > 1600 && mousePressed == true && glossaryState == GLOSSARY_DORMENT || overlapsRectCorner(GLOSSARY_OPENBUTTON_XPOS, GLOSSARY_OPENBUTTON_YPOS, 200, 200, mouseX, mouseY)) {
+
       glossaryState = GLOSSARY_OPENING;
     }
     if (glossaryState == GLOSSARY_OPEN) {
       for (int i = 0; i < GLOSSARY_OBJECT_COLUMNS; i++) {
         for (int j = 0; j < GLOSSARY_OBJECT_OBJECTSPERCOLUMN; j++) {
           if (mouseX > GLOSSARY_HORZ_OFFSET + (i * 200) && mouseX < GLOSSARY_HORZ_OFFSET + (i * 200) + GLOSSARY_OBJECT_WH && mouseY > 200 + (j * 200) && mouseY < 200 + (j * 200) + GLOSSARY_OBJECT_WH && mousePressed == true) {
+
             currentElement = i + (4 * j);
+
+            currentElement = i + (3 * j);
+            if (mouseY > 350) {
+              currentElement += 1;
+            }
+            if (mouseY > 550) {
+              currentElement += 1;
+            }
+
             glossaryState = GLOSSARY_ELEMENT_OPEN;
           }
         }
@@ -70,6 +93,7 @@ class Glossary
         glossaryState = GLOSSARY_DORMENT;
       }
     }
+
     if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && navigationTimer <= 0)
     {
       if (glossaryState == GLOSSARY_OPEN) {
@@ -89,10 +113,12 @@ class Glossary
     case GLOSSARY_OPENING:
       if (glossaryPosXpos > 0) {
         glossaryPosXpos -= 15;
+
         glossarySizeX += 15;
       } else {
         glossaryState = GLOSSARY_OPEN;
       }
+
       rect(glossaryPosXpos, glossaryPosYpos, glossarySizeX, glossarySizeY);
       break;
 
@@ -110,19 +136,26 @@ class Glossary
       rect(glossaryPosXpos, glossaryPosYpos, glossarySizeX, glossarySizeY);
       image(style.linkerPijl, 100, 865, 100, 50);
       fill(style.white);
+
       text("Regelboekje", width/2, height/8);
       fill(style.white);
       for (int i = 0; i < GLOSSARY_OBJECT_COLUMNS; i++) {
         for (int j = 0; j < GLOSSARY_OBJECT_OBJECTSPERCOLUMN; j++) {
           rect(GLOSSARY_HORZ_OFFSET + 200 * i, 200 + j * 200, 100, 100);
+
           iconSelector(i + j);
+
         }
       }
       break;
 
     case GLOSSARY_ELEMENT_OPEN:
+
       rect(glossaryPosXpos, glossaryPosYpos, glossarySizeX, glossarySizeY);
       image(style.linkerPijl, 100, 865, 100, 50);
+
+      rect(theButtonXpos, theButtonYpos, glossarySizeX, glossarySizeY);
+
       contentSelector(currentElement);
       break;
 
@@ -130,6 +163,7 @@ class Glossary
       break;
     }
     /*fill (style.black);
+
      text (currentElement, 100, 100);
      fill(style.white);*/
   }
@@ -174,12 +208,14 @@ class Glossary
       break;
     }
     imageMode(CENTER);
+
   }
 
   void contentSelector(int arrayIndex) { //this function defines what text/images/etc should be drawn in what glossarycontent object
     fill(style.black);
     switch (arrayIndex) {
     case 0: //bankrun
+
       fill(style.white);
       textSize(style.textSize);
       text("Bankruns", width/2, height/8);
@@ -286,6 +322,7 @@ class Glossary
       textSize(16);
       text("Zebras zijn eigenlijk paarden die ontsnapt zijn uit de gevangenis.", 500, 200);
       text("Als je degradeerd naar de gevangenis (zie degraderen/promoveren voor meer uitleg) blijf je in het spel, maar kun je minder dingen doen.\n Tijdens jouw beurt mag je alle normale beurtopties uitvoeren behalve bieden op fanancieringkaarten.\n Al het goud/krediet wat je verdient in de beurt moet direct gebruikt worden om schulden te betalen.\nAls al je schulden zijn betaald promoveer je weer naar kredietklasse I\nAls je in de gevangenis zit en je je schulden niet kunt betalen tijdens een bankrun ga je failliet en is het spel voor jou over.", (width / 3) * 2, height/2);
+
       break;
     }
   }

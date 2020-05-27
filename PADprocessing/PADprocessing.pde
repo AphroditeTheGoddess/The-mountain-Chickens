@@ -38,6 +38,7 @@ void draw()
 
   glossary.glossaryUpdateDraw();
 
+
   if (glossary.glossaryState == GLOSSARY_DORMENT) {
     switch(screen)
     {
