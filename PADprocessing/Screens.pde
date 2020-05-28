@@ -1087,10 +1087,9 @@ class Screens
   void screen46()
   {
     imageMode(CENTER);
-    fill(255);
-    text("Er zijn twéé typen dobbelstenen.", 1100, 100);
-    text("Gooi eerst een wijkdobbelsteen.", 1100, 150);
-    text("(Na de derde bankrun komt er nog één wijk dobbelsteen bij.)", 800, 200);
+    text("Er zijn twéé typen dobbelstenen.", 1050, 100);
+    text("Gooi eerst een wijkdobbelsteen.", 1050, 150);
+    text("(Na de derde bankrun komt er nog één wijk dobbelsteen bij.)", 750, 200);
     text("Wat heb je gegooid?", 400, 575);
     text("Wijk:", 1050, 275);
 
@@ -1199,7 +1198,6 @@ class Screens
   void screen50()
   {
     imageMode(CENTER);
-    fill(255);
     text("Dit zijn bij bijvoorbeeld de molen de getroffen wijken.", 800, 200);
     text("Op alle huizenblokken waar de molen staat afgebeeld,", 800, 750);
     text("zal de krediet dobbelsteen effect hebben.", 800, 800);
@@ -1210,7 +1208,6 @@ class Screens
   void screen51()
   {
     imageMode(CENTER);
-    fill(255);
     text("Voorbeeld van een worp:", 800, 150);
     text("4 spelers hebben 10 of meer krediet op deze huizenblokken.", 800, 775);
     text("4 goederen moeten van bedrijfsmarkt naar Natuurlijke Voorraad.", 800, 825);
@@ -1367,7 +1364,6 @@ class Screens
   void screen60()
   {
     imageMode(CENTER);
-    fill(255);
     text("Gooi nu een kredietdobbelsteen.", 1100, 150);
     text("Wat heb je gegooid?", 1100, 200);
     text("Krediet:", 500, 275);
