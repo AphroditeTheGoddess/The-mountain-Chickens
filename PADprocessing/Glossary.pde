@@ -172,9 +172,10 @@ class Glossary
     image(style.glossaryDobbelstenen, GLOSSARY_HORZ_OFFSET + 200, 200, 100, 100);
     image(style.glossaryPromoveren, GLOSSARY_HORZ_OFFSET + 2 * 200, 200, 100, 100);
     image(style.glossaryMarkten, GLOSSARY_HORZ_OFFSET + 3 * 200, 200, 100, 100);
+    image(style.glossaryKopen, GLOSSARY_HORZ_OFFSET, 2* 200, 100, 100);
     image(style.glossaryGoud, GLOSSARY_HORZ_OFFSET + 200, 2 * 200, 100, 100);
     image(style.glossaryKrediet, GLOSSARY_HORZ_OFFSET + 2 * 200, 2 * 200, 100, 100);
-    //bank icon nodig
+    image(style.glossaryBank, GLOSSARY_HORZ_OFFSET + 3 * 200, 2 * 200, 100, 100);
     image(style.glossaryActiekaart, GLOSSARY_HORZ_OFFSET, 3 * 200, 100, 100);
     image(style.glossaryFinancieringskaart, GLOSSARY_HORZ_OFFSET + 200, 3 * 200, 100, 100);
     image(style.glossaryGilde, GLOSSARY_HORZ_OFFSET + 2 * 200, 3 * 200, 100, 100);
