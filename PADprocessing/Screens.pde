@@ -1075,7 +1075,7 @@ class Screens
       count = 0;
     }
     
-    previous(54);
+    previous(38);
   }
   void screen45()
   {
@@ -1287,7 +1287,7 @@ class Screens
   {
     imageMode(CENTER);
     fill(255);
-    text("Dit zijn bij de molen de getroffen wijken.", 800, 200);
+    text("Dit zijn bij bijvoorbeeld de molen de getroffen wijken.", 800, 200);
     text("Op alle huizenblokken waar de molen staat afgebeeld,", 800, 750);
     text("zal de krediet dobbelsteen effect hebben.", 800, 800);
     image(style.screen50, width/2, 450);
