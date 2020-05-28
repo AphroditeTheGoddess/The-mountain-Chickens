@@ -1364,8 +1364,8 @@ class Screens
   void screen60()
   {
     imageMode(CENTER);
-    text("Gooi nu een kredietdobbelsteen.", 1100, 150);
-    text("Wat heb je gegooid?", 1100, 200);
+    text("Gooi nu een kredietdobbelsteen.", 1050, 150);
+    text("Wat heb je gegooid?", 1050, 200);
     text("Krediet:", 500, 275);
     
     //When you click on the dices, it will bring you to a page about that specific dice.
