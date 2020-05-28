@@ -32,8 +32,8 @@ class Glossary
 
   int navigationTimer;
 
-  final int GLOSSARY_OPENBUTTON_XPOS = width - 150;
-  final int GLOSSARY_OPENBUTTON_YPOS = 150;
+  final int GLOSSARY_OPENBUTTON_XPOS = width - 100;
+  final int GLOSSARY_OPENBUTTON_YPOS = 100;
 
   Glossary() { //constructor for the glossary
     glossaryState = 0;
@@ -63,7 +63,7 @@ class Glossary
       glossaryState = GLOSSARY_DORMENT;
     }
 
-    if (mouseX > 1600 && mousePressed == true && glossaryState == GLOSSARY_DORMENT || overlaps(GLOSSARY_OPENBUTTON_XPOS, GLOSSARY_OPENBUTTON_YPOS, 200, 200, mouseX, mouseY) && mousePressed) {
+    if (mouseX > 1600 && mousePressed == true && glossaryState == GLOSSARY_DORMENT || overlaps(GLOSSARY_OPENBUTTON_XPOS, GLOSSARY_OPENBUTTON_YPOS, 150, 150, mouseX, mouseY) && mousePressed) {
       glossaryState = GLOSSARY_OPENING;
     }
     if (glossaryState == GLOSSARY_OPEN) {
@@ -128,7 +128,7 @@ class Glossary
         glossarySizeX -= 15;
       }
       rect(glossaryPosXpos, glossaryPosYpos, glossarySizeX, glossarySizeY);
-      image(style.glossaryKnop, GLOSSARY_OPENBUTTON_XPOS, GLOSSARY_OPENBUTTON_YPOS, 200, 200);
+      image(style.glossaryKnop, GLOSSARY_OPENBUTTON_XPOS, GLOSSARY_OPENBUTTON_YPOS, 150, 150);
       break;
 
     case GLOSSARY_OPEN:
