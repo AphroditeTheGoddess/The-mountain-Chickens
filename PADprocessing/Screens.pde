@@ -324,7 +324,7 @@ class Screens
 
     text("Einde beurt ->", 1000, 60);
     rectMode(CENTER);
-    rect(1500, 50, 100, 50);
+    rect(1200, 50, 100, 50);
     if (overlaps(1200, 50, 100, 50, mouseX, mouseY) && mousePressed) {
       screen = 16;
     }
