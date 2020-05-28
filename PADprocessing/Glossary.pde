@@ -184,6 +184,7 @@ class Glossary
 
   void contentSelector(int arrayIndex) { //this function defines what text/images/etc should be drawn in what glossarycontent object
     fill(style.black);
+    // with Monnay
     switch (arrayIndex) {
     case 0: //bankrun
 
