@@ -65,6 +65,8 @@ class Style
   PImage glossaryKrediet;
   PImage glossaryMarkten;
   PImage glossaryPromoveren;
+  PImage glossaryKopen;
+  PImage glossaryBank;
 
   PImage scoreblok;
 
@@ -135,6 +137,8 @@ class Style
     glossaryKrediet = loadImage("content/glossary_krediet.png");
     glossaryMarkten = loadImage("content/glossary_productie-consumptie.png");
     glossaryPromoveren = loadImage("content/glossary_promoveren.png");
+    glossaryKopen = loadImage("content/glossary_kopen-verkopen.png");
+    glossaryBank = loadImage("content/glossary_bank.png");
 
     scoreblok = loadImage("content/scoreblok.PNG");
   }
