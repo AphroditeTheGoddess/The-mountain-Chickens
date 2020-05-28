@@ -67,6 +67,7 @@ class Style
   PImage glossaryPromoveren;
   PImage glossaryKopen;
   PImage glossaryBank;
+  PImage glossarySpeech;
 
   PImage scoreblok;
 
@@ -139,6 +140,7 @@ class Style
     glossaryPromoveren = loadImage("data/glossary_promoveren.png");
     glossaryKopen = loadImage("data/glossary_kopen-verkopen.png");
     glossaryBank = loadImage("data/glossary_bank.png");
+    glossarySpeech = loadImage("data/glossary_speechbubble.png");
 
     scoreblok = loadImage("data/scoreblok.PNG");
   }
