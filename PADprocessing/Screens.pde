@@ -1097,51 +1097,6 @@ class Screens
     count++;
     
     previous(44);
-
-    /*
-    //When you click on the dices, it will bring you to a page about that specific dice.
-    //Red 10
-    image(style.r10, 100, 400, 200, 200);
-    if (overlaps(100, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
-      screen = 47;
-      count = 0;
-    }
-
-    //Red 20
-    image(style.r20, 100, 700, 200, 200);
-    if (overlaps(100, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
-      screen = 47;
-      count = 0;
-    }
-
-    //Green 10
-    image(style.g10, 325, 400, 200, 200);
-    if (overlaps(325, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
-      screen = 48;
-      count = 0;
-    }
-
-    //Green 20
-    image(style.g20, 325, 700, 200, 200);
-    if (overlaps(325, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
-      screen = 48;
-      count = 0;
-    }
-
-    //Blue 10
-    image(style.b10, 550, 400, 200, 200);
-    if (overlaps(550, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
-      screen = 57;
-      count = 0;
-    }
-
-    //Blue 20
-    image(style.b20, 550, 700, 200, 200);    
-    if (overlaps(550, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
-      screen = 57;
-      count = 0;
-    }
-    */
     
     //Molen
     image(style.molen, 1000, 400, 200, 200);
@@ -1184,48 +1139,6 @@ class Screens
       screen = 50;
       count = 0;
     }
-    /*
-    imageMode(CENTER);
-    text("Gooi nu een kredietdobbelsteen.", 1000, 100);
-    text("Waarop is je dobbelsteen geland?", 1000, 200);
-
-    //When you click on the dices, it will bring you to a page about that specific dice.
-    //Red 10
-    image(style.r10, 400, 400, 200, 200);
-    if (overlaps(400, 400, 200, 200, mouseX, mouseY) && mousePressed) {
-      screen = 47;
-    }
-    
-    //Red 20
-    image(style.r20, 400, 700, 200, 200);
-    if (overlaps(400, 700, 200, 200, mouseX, mouseY) && mousePressed) {
-      screen = 47;
-    }
-
-    //Green 10
-    image(style.g10, 800, 400, 200, 200);
-    if (overlaps(800, 400, 200, 200, mouseX, mouseY) && mousePressed) {
-      screen = 48;
-    }
-
-    //Green 20
-    image(style.g20, 800, 700, 200, 200);
-    if (overlaps(800, 700, 200, 200, mouseX, mouseY) && mousePressed) {
-      screen = 48;
-    }
-
-    //Blue 10
-    image(style.b10, 1200, 400, 200, 200);
-    if (overlaps(1200, 400, 200, 200, mouseX, mouseY) && mousePressed) {
-      screen = 57;
-    }
-
-    //Blue 20
-    image(style.b20, 1200, 700, 200, 200);    
-    if (overlaps(1200, 700, 200, 200, mouseX, mouseY) && mousePressed) {
-      screen = 49;
-    }
-    */
     previous(44);
 
   }
@@ -1242,7 +1155,7 @@ class Screens
     text("Verwijder vervolgens dezelfde hoeveelheid", 800, 600);
     text("goederen uit de bedrijfsmarkt (rood) en voeg", 800, 650);
     text("deze toe aan de Natuurlijke Voorraad.", 800, 700);
-    previous(46);
+    previous(60);
     next(50);
   }
   void screen48()
@@ -1258,7 +1171,7 @@ class Screens
     text("Verwijder vervolgens dezelfde hoeveelheid", 800, 600);
     text("goederen uit de consumentenmarkt (groen) en voeg", 800, 650);
     text("deze toe aan de Natuurlijke Voorraad.", 800, 700);
-    previous(46);
+    previous(60);
     next(50);
   }
   void screen49()
@@ -1312,7 +1225,6 @@ class Screens
     text("Klik door om naar het begin van het stappenplan te gaan", width/2, 500);
 
     bankrun.bankrunThisTurn = false;
-    previous(46);
     next(36);
   }
 
@@ -1463,14 +1375,14 @@ class Screens
     //When you click on the dices, it will bring you to a page about that specific dice.
     //Red 10
     image(style.r10, 300, 400, 200, 200);
-    if (overlaps(100, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    if (overlaps(300, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
       count = 0;
     }
 
     //Red 20
     image(style.r20, 300, 700, 200, 200);
-    if (overlaps(100, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+    if (overlaps(300, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
       screen = 47;
       count = 0;
     }
