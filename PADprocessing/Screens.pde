@@ -1075,7 +1075,7 @@ class Screens
       count = 0;
     }
     
-    previous(54);
+    previous(38);
   }
   void screen45()
   {
