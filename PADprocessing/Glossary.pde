@@ -142,19 +142,17 @@ class Glossary
       for (int i = 0; i < GLOSSARY_OBJECT_COLUMNS; i++) {
         for (int j = 0; j < GLOSSARY_OBJECT_OBJECTSPERCOLUMN; j++) {
           rect(GLOSSARY_HORZ_OFFSET + 200 * i, 200 + j * 200, 100, 100);
-
-          iconSelector(i + j);
-
         }
       }
+      drawIcons();
       break;
 
     case GLOSSARY_ELEMENT_OPEN:
 
       rect(glossaryPosXpos, glossaryPosYpos, glossarySizeX, glossarySizeY);
-      image(style.linkerPijl, 100, 865, 100, 50);
 
       rect(theButtonXpos, theButtonYpos, glossarySizeX, glossarySizeY);
+      image(style.linkerPijl, 100, 865, 100, 50);
 
       contentSelector(currentElement);
       break;
@@ -163,52 +161,25 @@ class Glossary
       break;
     }
     /*fill (style.black);
-
+     
      text (currentElement, 100, 100);
      fill(style.white);*/
   }
 
-  void iconSelector(int arrayIndex) { //this function supplies the glossary objects with the right icons
+  void drawIcons() { //this function supplies the glossary objects with the right icons
     imageMode(CORNER);
-
-    switch (arrayIndex) {
-    case 0: //bankrun fiche plaatje
-      image(style.bankruncoin, GLOSSARY_HORZ_OFFSET, 200, 100, 100);
-      break;
-    case 1: //dobbelstenen 
-          image(style.glossaryDobbelstenen, GLOSSARY_HORZ_OFFSET + 200, 200, 100, 100);
-      break;
-    case 2: //promoveren/degraderen
-          image(style.glossaryPromoveren, GLOSSARY_HORZ_OFFSET + 2 * 200, 200, 100, 100);
-      break;
-    case 3: //productie/consumptie
-          image(style.glossaryMarkten, GLOSSARY_HORZ_OFFSET + 3 * 200, 200, 100, 100);
-      break;
-    case 4: //kopen/verkopen icon nodig
-      break;
-    case 5: //goud
-          image(style.glossaryGoud, GLOSSARY_HORZ_OFFSET + 200, 2 * 200, 100, 100);
-      break;
-    case 6: //krediet
-          image(style.glossaryKrediet, GLOSSARY_HORZ_OFFSET + 2 * 200, 2 * 200, 100, 100);
-      break;
-    case 7: //bank icon nodig
-      break;
-    case 8: //actie kaart
-          image(style.glossaryActiekaart, GLOSSARY_HORZ_OFFSET, 3 * 200, 100, 100);
-      break;
-    case 9: //financierings kaart
-          image(style.glossaryFinancieringskaart, GLOSSARY_HORZ_OFFSET + 200, 3 * 200, 100, 100);
-      break;
-    case 10: //gilde
-          image(style.glossaryGilde, GLOSSARY_HORZ_OFFSET + 2 * 200, 3 * 200, 100, 100);
-      break;
-    case 11: //gevangenis
-          image(style.glossaryGevangenis, GLOSSARY_HORZ_OFFSET + 3 * 200, 3 * 200, 100, 100);
-      break;
-    }
+    image(style.bankruncoin, GLOSSARY_HORZ_OFFSET, 200, 100, 100);
+    image(style.glossaryDobbelstenen, GLOSSARY_HORZ_OFFSET + 200, 200, 100, 100);
+    image(style.glossaryPromoveren, GLOSSARY_HORZ_OFFSET + 2 * 200, 200, 100, 100);
+    image(style.glossaryMarkten, GLOSSARY_HORZ_OFFSET + 3 * 200, 200, 100, 100);
+    image(style.glossaryGoud, GLOSSARY_HORZ_OFFSET + 200, 2 * 200, 100, 100);
+    image(style.glossaryKrediet, GLOSSARY_HORZ_OFFSET + 2 * 200, 2 * 200, 100, 100);
+    //bank icon nodig
+    image(style.glossaryActiekaart, GLOSSARY_HORZ_OFFSET, 3 * 200, 100, 100);
+    image(style.glossaryFinancieringskaart, GLOSSARY_HORZ_OFFSET + 200, 3 * 200, 100, 100);
+    image(style.glossaryGilde, GLOSSARY_HORZ_OFFSET + 2 * 200, 3 * 200, 100, 100);
+    image(style.glossaryGevangenis, GLOSSARY_HORZ_OFFSET + 3 * 200, 3 * 200, 100, 100);
     imageMode(CENTER);
-
   }
 
   void contentSelector(int arrayIndex) { //this function defines what text/images/etc should be drawn in what glossarycontent object
