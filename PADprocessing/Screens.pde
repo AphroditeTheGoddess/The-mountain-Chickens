@@ -290,7 +290,6 @@ class Screens
 
   void screen10()
   {
-    bankrun.bankrunThisTurn = false;
     textSize(60);
     text("Biedronde over", width/2, height/5);
     textSize(40);
@@ -327,6 +326,7 @@ class Screens
     rect(1200, 50, 100, 50);
     if (overlaps(1200, 50, 100, 50, mouseX, mouseY) && mousePressed) {
       screen = 16;
+      bankrun.bankrunThisTurn = false;
     }
     previous(8);
   }
@@ -462,7 +462,6 @@ class Screens
       screen = 22;
     }
 
-    previous(10);
     next(23);
   }
 
@@ -924,7 +923,6 @@ class Screens
   }
   void screen38()
   {
-    bankrun.bankrunThisTurn = false;
     textSize(60);
     text("Biedronde over", width/2, height/5);
     textSize(40);
@@ -1175,6 +1173,7 @@ class Screens
   }
   void screen49()
   {
+    bankrun.bankrunThisTurn = false;
     count++;
     textSize(40);
     text("Hoeveel spelers hebben 20 of meer krediet op de getroffen huizenblokken?", width/2, height/4);
@@ -1298,6 +1297,7 @@ class Screens
   //Scherm voor dobbelsteen blauwe 10 (volledige versie)
   void screen57()
   {
+    bankrun.bankrunThisTurn = false;
     count++;
     textSize(40);
     text("Hoeveel spelers hebben 10 of meer krediet op de getroffen huizenblokken?", width/2, height/4);
@@ -1411,7 +1411,6 @@ class Screens
       count = 0;
     }
     
-    next(52);
     previous(46);
   }
 }
