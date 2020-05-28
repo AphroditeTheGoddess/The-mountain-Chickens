@@ -13,8 +13,6 @@ final int GLOSSARY_OBJECT_WH = 100;
 final int GLOSSARY_ELEMENT_TEXT_XOFFSET = width - width / 3;
 final int AVATAR_XPOS = 200;
 final int AVATAR_YPOS = /*height - height/4*/ height/2;
-final int GLOSSARY_OPENBUTTON_XPOS = width - 250;
-final int GLOSSARY_OPENBUTTON_YPOS = 250;
 
 
 
@@ -33,6 +31,9 @@ class Glossary
   int currentElement;
 
   int navigationTimer;
+
+  final int GLOSSARY_OPENBUTTON_XPOS = width - 150;
+  final int GLOSSARY_OPENBUTTON_YPOS = 150;
 
   Glossary() { //constructor for the glossary
     glossaryState = 0;
@@ -62,8 +63,7 @@ class Glossary
       glossaryState = GLOSSARY_DORMENT;
     }
 
-    if (mouseX > 1600 && mousePressed == true && glossaryState == GLOSSARY_DORMENT || overlapsRectCorner(GLOSSARY_OPENBUTTON_XPOS, GLOSSARY_OPENBUTTON_YPOS, 200, 200, mouseX, mouseY)) {
-
+    if (mouseX > 1600 && mousePressed == true && glossaryState == GLOSSARY_DORMENT || overlaps(GLOSSARY_OPENBUTTON_XPOS, GLOSSARY_OPENBUTTON_YPOS, 200, 200, mouseX, mouseY) && mousePressed) {
       glossaryState = GLOSSARY_OPENING;
     }
     if (glossaryState == GLOSSARY_OPEN) {
@@ -150,7 +150,6 @@ class Glossary
     case GLOSSARY_ELEMENT_OPEN:
 
       rect(glossaryPosXpos, glossaryPosYpos, glossarySizeX, glossarySizeY);
-
       rect(theButtonXpos, theButtonYpos, glossarySizeX, glossarySizeY);
       image(style.linkerPijl, 100, 865, 100, 50);
 
@@ -166,13 +165,13 @@ class Glossary
      fill(style.white);*/
   }
 
-  void drawIcons() { //this function supplies the glossary objects with the right icons
+  void drawIcons() { //this function supplies the glossary with the right icons
     imageMode(CORNER);
     image(style.bankruncoin, GLOSSARY_HORZ_OFFSET, 200, 100, 100);
     image(style.glossaryDobbelstenen, GLOSSARY_HORZ_OFFSET + 200, 200, 100, 100);
     image(style.glossaryPromoveren, GLOSSARY_HORZ_OFFSET + 2 * 200, 200, 100, 100);
     image(style.glossaryMarkten, GLOSSARY_HORZ_OFFSET + 3 * 200, 200, 100, 100);
-    image(style.glossaryKopen, GLOSSARY_HORZ_OFFSET, 2* 200, 100, 100);
+    image(style.glossaryKopen, GLOSSARY_HORZ_OFFSET, 2 * 200, 100, 100);
     image(style.glossaryGoud, GLOSSARY_HORZ_OFFSET + 200, 2 * 200, 100, 100);
     image(style.glossaryKrediet, GLOSSARY_HORZ_OFFSET + 2 * 200, 2 * 200, 100, 100);
     image(style.glossaryBank, GLOSSARY_HORZ_OFFSET + 3 * 200, 2 * 200, 100, 100);
