@@ -28,6 +28,7 @@ class Bankrun
       bankrunCount += 1;
       screen = 24;
       bankrunThisTurn = true;
+      sounds.bankrun.play();
     }
   }
 

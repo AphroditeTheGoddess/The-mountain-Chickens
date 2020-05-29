@@ -42,24 +42,28 @@ class Screens
     count++;
 
     if (overlaps(400, 300, 100, 100, mouseX, mouseY) && mousePressed && count > 20) {
+      sounds.buttonPush.play();
       screen = 25; 
       amountOfPlayers = 3;
       playersSelected = true;
       count = 0;
     }
     if (overlaps(1200, 300, 100, 100, mouseX, mouseY) && mousePressed && count > 20) {
+      sounds.buttonPush.play();
       screen = 25; 
       amountOfPlayers = 4;
       playersSelected = true;
       count = 0;
     }
     if (overlaps(400, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 20) {
+      sounds.buttonPush.play();
       screen = 25; 
       amountOfPlayers = 5;
       playersSelected = true;
       count = 0;
     }
     if (overlaps(1200, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 20) {
+      sounds.buttonPush.play();
       screen = 25; 
       amountOfPlayers = 6;
       playersSelected = true;
@@ -86,11 +90,13 @@ class Screens
 
     //Button for 'bord opzetten'
     if (overlaps(400, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 4; 
       count = 0;
     }
     //Button for 'start spel'
     if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 7;
       count = 0;
     }
@@ -260,10 +266,12 @@ class Screens
     count++;
 
     if (overlaps(500, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 9; 
       count = 0;
     }
     if (overlaps(1100, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 10; 
       count = 0;
     }
@@ -309,14 +317,17 @@ class Screens
     count++;
 
     if (overlaps(300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 11; 
       count = 0;
     }
     if (overlaps(800, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 12; 
       count = 0;
     }
     if (overlaps(1300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 15; 
       count = 0;
     }
@@ -325,6 +336,7 @@ class Screens
     rectMode(CENTER);
     rect(1200, 50, 100, 50);
     if (overlaps(1200, 50, 100, 50, mouseX, mouseY) && mousePressed) {
+      sounds.buttonPush.play();
       screen = 16;
       bankrun.bankrunThisTurn = false;
     }
@@ -429,36 +441,42 @@ class Screens
     //Red 10
     image(style.r10, 400, 400, 200, 200);
     if (overlaps(400, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+      sounds.buttonPush.play();
       screen = 17;
     }
 
     //Red 20
     image(style.r20, 400, 700, 200, 200);
     if (overlaps(400, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+      sounds.buttonPush.play();
       screen = 18;
     }
 
     //Green 10
     image(style.g10, 800, 400, 200, 200);
     if (overlaps(800, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+      sounds.buttonPush.play();
       screen = 19;
     }
 
     //Green 20
     image(style.g20, 800, 700, 200, 200);
     if (overlaps(800, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+      sounds.buttonPush.play();
       screen = 20;
     }
 
     //Blue 10
     image(style.b10, 1200, 400, 200, 200);
     if (overlaps(1200, 400, 200, 200, mouseX, mouseY) && mousePressed) {
+      sounds.buttonPush.play();
       screen = 21;
     }
 
     //Blue 20
     image(style.b20, 1200, 700, 200, 200);    
     if (overlaps(1200, 700, 200, 200, mouseX, mouseY) && mousePressed) {
+      sounds.buttonPush.play();
       screen = 22;
     }
 
@@ -565,18 +583,21 @@ class Screens
     text("5", 1200, 525);
 
     if (overlaps(400, 500, 100, 100, mouseX, mouseY) && mousePressed && count > 15) {
+      sounds.buttonPush.play();
       screen = 3; 
       bankrun.amountOfBankrunFiches = 3;
       bankrunFichesSelected = true;
       count = 0;
     }
     if (overlaps(800, 500, 100, 100, mouseX, mouseY) && mousePressed && count > 15) {
+      sounds.buttonPush.play();
       screen = 3; 
       bankrun.amountOfBankrunFiches = 4;
       bankrunFichesSelected = true;
       count = 0;
     }
     if (overlaps(1200, 500, 100, 100, mouseX, mouseY) && mousePressed && count > 15) {
+      sounds.buttonPush.play();
       screen = 3; 
       bankrun.amountOfBankrunFiches = 5;
       bankrunFichesSelected = true;
@@ -618,24 +639,28 @@ class Screens
     count++;
 
     if (overlaps(400, 300, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 28; 
       amountOfPlayers = 3;
       playersSelected = true;
       count = 0;
     }
     if (overlaps(1200, 300, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 28; 
       amountOfPlayers = 4;
       playersSelected = true;
       count = 0;
     }
     if (overlaps(400, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 28; 
       amountOfPlayers = 5;
       playersSelected = true;
       count = 0;
     }
     if (overlaps(1200, 600, 100, 100, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 28; 
       amountOfPlayers = 6;
       playersSelected = true;
@@ -661,18 +686,21 @@ class Screens
     text("5", 1200, 525);
 
     if (overlaps(400, 500, 100, 100, mouseX, mouseY) && mousePressed && count > 15) {
+      sounds.buttonPush.play();
       screen = 29; 
       bankrun.amountOfBankrunFiches = 3;
       bankrunFichesSelected = true;
       count = 0;
     }
     if (overlaps(800, 500, 100, 100, mouseX, mouseY) && mousePressed && count > 15) {
+      sounds.buttonPush.play();
       screen = 29; 
       bankrun.amountOfBankrunFiches = 4;
       bankrunFichesSelected = true;
       count = 0;
     }
     if (overlaps(1200, 500, 100, 100, mouseX, mouseY) && mousePressed && count > 15) {
+      sounds.buttonPush.play();
       screen = 29; 
       bankrun.amountOfBankrunFiches = 5;
       bankrunFichesSelected = true;
@@ -699,11 +727,13 @@ class Screens
 
     //Button for 'bord opzetten'
     if (overlaps(400, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 30; 
       count = 0;
     }
     //Button for 'start spel'
     if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 34;
       count = 0;
     }
@@ -893,10 +923,12 @@ class Screens
     count++;
 
     if (overlaps(500, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 37; 
       count = 0;
     }
     if (overlaps(1100, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 53; 
       count = 0;
     }
@@ -942,14 +974,17 @@ class Screens
     count++;
 
     if (overlaps(300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 39; 
       count = 0;
     }
     if (overlaps(800, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 40; 
       count = 0;
     }
     if (overlaps(1300, 650, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 43; 
       count = 0;
     }
@@ -958,6 +993,7 @@ class Screens
     rectMode(CENTER);
     rect(1200, 50, 100, 50);
     if (overlaps(1200, 50, 100, 50, mouseX, mouseY) && mousePressed) {
+      sounds.buttonPush.play();
       screen = 44;
     }
     
@@ -1065,10 +1101,12 @@ class Screens
     count++;
 
     if (overlaps(500, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 45; 
       count = 0;
     }
     if (overlaps(1100, height/2, 400, 400, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 46; 
       count = 0;
     }
@@ -1098,6 +1136,7 @@ class Screens
     //Molen
     image(style.molen, 1000, 400, 200, 200);
     if (overlaps(1000, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 50;
       count = 0;
     }
@@ -1105,6 +1144,7 @@ class Screens
     //Boot
     image(style.boot, 1000, 700, 200, 200);
     if (overlaps(1000, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 50;
       count = 0;
     }
@@ -1112,6 +1152,7 @@ class Screens
     //Vis
     image(style.vis, 1225, 400, 200, 200);
     if (overlaps(1225, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 50;
       count = 0;
     }
@@ -1119,6 +1160,7 @@ class Screens
     //Wiel
     image(style.wiel, 1225, 700, 200, 200);
     if (overlaps(1225, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 50;
       count = 0;
     }
@@ -1126,6 +1168,7 @@ class Screens
     //Bakstenen
     image(style.bakstenen, 1450, 400, 200, 200);
     if (overlaps(1450, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 50;
       count = 0;
     }
@@ -1133,6 +1176,7 @@ class Screens
     //Bloem
     image(style.bloem, 1450,700, 200, 200);
     if (overlaps(1450, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 50;
       count = 0;
     }
@@ -1270,13 +1314,15 @@ class Screens
 
     //Button for 'basis spel'
     if (overlaps(400, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
+      sounds.buttonPush.play();
       screen = 2; 
       count = 0;
       version = 0;
     }
     //Button for 'volledig spel'
     if (overlaps(1200, 450, 500, 500, mouseX, mouseY) && mousePressed && count > 30) {
-      screen = 27/*up to change @Pepijn :P*/;
+      sounds.buttonPush.play();
+      screen = 27;
       count = 0;
       version = 1;
     }
@@ -1312,6 +1358,7 @@ class Screens
       
       if(mousePressed && overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100, mouseX, mouseY) && count > 40)
       {
+    
         stappen = i;
         bankrun.bankrunCount += 2*i;
         screen = 59;
@@ -1348,6 +1395,7 @@ class Screens
       
       if(mousePressed && overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, 800, 100, 100, mouseX, mouseY) && count > 20)
       {
+        
         bankrun.bankrunCount += 2*i;
         screen = 52;
         count = 0;
@@ -1372,6 +1420,7 @@ class Screens
     //Red 10
     image(style.r10, 300, 400, 200, 200);
     if (overlaps(300, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 47;
       count = 0;
     }
@@ -1379,6 +1428,7 @@ class Screens
     //Red 20
     image(style.r20, 300, 700, 200, 200);
     if (overlaps(300, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 47;
       count = 0;
     }
@@ -1386,6 +1436,7 @@ class Screens
     //Green 10
     image(style.g10, 525, 400, 200, 200);
     if (overlaps(525, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 48;
       count = 0;
     }
@@ -1393,6 +1444,7 @@ class Screens
     //Green 20
     image(style.g20, 525, 700, 200, 200);
     if (overlaps(525, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 48;
       count = 0;
     }
@@ -1400,6 +1452,7 @@ class Screens
     //Blue 10
     image(style.b10, 750, 400, 200, 200);
     if (overlaps(750, 400, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 57;
       count = 0;
     }
@@ -1407,6 +1460,7 @@ class Screens
     //Blue 20
     image(style.b20, 750, 700, 200, 200);    
     if (overlaps(750, 700, 200, 200, mouseX, mouseY) && mousePressed && count > 25) {
+      sounds.buttonPush.play();
       screen = 57;
       count = 0;
     }

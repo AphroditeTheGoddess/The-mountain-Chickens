@@ -1,9 +1,13 @@
+import ddf.minim.*;
+
+Minim minim;
 Screens screens;
 RoundCounter counter;
 Style style;
 Bankrun bankrun;
 GameEndingTracker gameEndingTracker;
 Glossary glossary;
+Sounds sounds;
 int screen = 1;
 int amountOfPlayers;
 int count;
@@ -13,6 +17,8 @@ int version;
 void setup()
 {
   size(1650, 900);
+  minim = new Minim(this);
+  sounds = new Sounds();
   screens = new Screens();
   style = new Style();
   counter = new RoundCounter();
@@ -37,6 +43,15 @@ void draw()
   bankrun.bankrunDisplay();
 
   glossary.glossaryUpdateDraw();
+
+  if(mousePressed){
+    if(sounds.buttonPush.position() == sounds.buttonPush.length()){
+      sounds.buttonPush.rewind();
+    }
+    if(sounds.bankrun.position() == sounds.bankrun.length()){
+      sounds.bankrun.rewind();
+    }
+  }
 
 
   if (glossary.glossaryState == GLOSSARY_DORMENT) {
@@ -273,11 +288,11 @@ void draw()
     case 58:
       screens.screen58();
       return;
-      
+
     case 59:
       screens.screen59();
       return;
-      
+
     case 60:
       screens.screen60();
       return;
@@ -310,6 +325,7 @@ void previous(int previousScreen)
   count++;
   if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 40)
   {
+    sounds.buttonPush.play();
     screen = previousScreen;
     count = 0;
   }
@@ -336,6 +352,7 @@ void next(int nextScreen)
   }
   if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 40)
   {
+    sounds.buttonPush.play();
     screen = nextScreen;
     count = 0;
   }
