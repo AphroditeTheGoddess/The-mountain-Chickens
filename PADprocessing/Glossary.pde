@@ -179,7 +179,7 @@ class Glossary
     imageMode(CENTER);
   }
 
-  void contentSelector(int arrayIndex) { //this function defines what text/images/etc should be drawn in what glossarycontent object
+void contentSelector(int arrayIndex) { //this function defines what text/images/etc should be drawn in what glossarycontent object
     fill(style.black);
     // with Monnay
     switch (arrayIndex) {
@@ -195,6 +195,7 @@ class Glossary
       text("Je mag gewoon blijven zitten hoor.", AVATAR_XPOS + 50, 200);
       fill(style.white);
       text("Een bankrun is een spel evenement dat gebeurd wanneer bepaalde condities zijn behaald.\nBij een bankrun komt het spel meteen stil te liggen.\nHet gaat pas weer verder als elke speler zijn schulden heeft afgelost.\nAls een speler zijn schulden niet kan aflossen degradeerd hij in kredietklasse en kan hij zelfs in de gevangenis belanden.\nEen bankrun onstaat wanneer een bankrunfiche het einde van de bankrunmeter bereikt of als al het goud in de goudreserve opraakt.", (width / 3) * 2, height/2);
+      image(style.bankrunMeter, width/2+200, height/2+275);
       break;
     case 1: //dobbelstenen
       fill(style.white);
@@ -207,6 +208,8 @@ class Glossary
       text("Als je rustig gooit kun je\nmisschien de uitkomst bepalen.", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("Er zijn twee soorten dobbelsteen, de kredietdobbelsteen en de wijkdobbelsteen.\nDe kredietdobbelsteen wordt aan het einde van een beurt gegooid en op basis van de worp gebeuren er bepaalde dingen.\nBij het getal 10 wordt het aantal spelers geteld die 10 of meer krediet hebben liggen op de getroffen huizenblokken.\nDe getroffen huizenblokken worden bepaald door een worp met de Wijkdobbelsteen.\nDitzelfde aantal blokjes wordt uit de markt met de corresponderende kleur gehaald. (groen/rood)\nVoor blauw worden er geen blokjes uit de markten gehaald,\ninplaats daarvan wordt het voorste bankrunfiche zoveel stappen verplaats als er getroffen spelers zijn.", (width / 3) * 2, height/2);
+      image(style.r10, width/3, height/2+300, 200, 200);
+      image(style.molen, width/2+500, height/4, 200, 200);
       break;
     case 2: //promoveren/degraderen
       fill(style.white);
@@ -219,6 +222,7 @@ class Glossary
       text("Als je je schulden niet kunt betalen tijdens\neen bankrun beland je in de gevangenis.", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("Rechtsboven op het bord zie je de kredietklassen.\nJe kunt op deze schaal promoveren en degraderen.\nPromoveren gebeurt als je in een keer schulden aflost die groter dan of gelijk zijn aan de getallen in het geel boven de kredietklassen.\nDegraderen gebeurt wanneer je tijdens een bankrun je schulden niet kunt aflossen.\nAls je degradeerd in de eerste kredietklasse beland je in de gevangenis!", (width / 3) * 2, height/2);
+      image(style.kredietKlassen, width/2+200, height/2+275);
       break;
     case 3: //productie/consumptie
       fill(style.white);
@@ -231,6 +235,7 @@ class Glossary
       text("Het duurste eten dat je kunt kopen is\nJapans Kobe vlees van 1000 euro per kilo.", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("Links en rechts op het bord zie je de productie en consumptie markten.\nAlle blokjes zijn verdeeld in groepen met getallen erbij die de actuele prijs van de blokje weergeven.\nAls een blokje gekocht wordt wordt deze aan de kant met de laagste prijs genomen en betaald voor die prijs.\nHetzelfde geldt voor verkoop.", (width / 3) * 2, height/2);
+      image(style.glossaryMarkten, width/2, height/2+275);
       break;
     case 4: //Kopen/Verkopen
       fill(style.white);
@@ -243,6 +248,7 @@ class Glossary
       text("Later in het spel veranderen de prijzen\nvan goederen erg snel, wacht niet te lang!", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("Kopen en verkopen van goederen in de groene/rode markt kan op elk moment in een beurt.\nDe getallen van het deel waar de blokjes in belanden bepalen de koop en verkoop prijs.\nStel je voor dat je vier blokjes wilt kopen uit de rode markt waarvan er twee in het deel van 4 en twee in het deel van 5 zitten.\n2 x 4 + 2 x 5 = 18 goud.", (width / 3) * 2, height/2);
+      image(style.screen15, width/3, height/2+300, 250, 250);
       break;
     case 5: //goud
       fill(style.white);
@@ -255,6 +261,7 @@ class Glossary
       text("Ongeveer 80% van het totale aantal goud\nop aarde is al gedolven door de mensheid.", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("Goud is naast krediet de valuta van het spel.\nGoud is altijd hetzelfde waard en kan gebruikt worden om dingen te kopen; zoals financierings- en actiekaarten.\nGoud is de enige manier om schulden af te lossen en kan verdiend worden door productie/consumptie blokjes-\nte verkopen voor de actuele marktwaarde\n of om financieringskaarten te verhandelen met andere spelers.", (width / 3) * 2, height/2);
+      image(style.gold, width/2, height/2+300, 260, 200);
       break;
     case 6: //krediet
       fill(style.white);
@@ -267,6 +274,7 @@ class Glossary
       text("Als je niet met krediet hoeft te\nbetalen zou ik dat ook niet doen.", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("Krediet is naast goud de valuta van het spel.\nKrediet werkt als een lening, en kan net als goud gebruikt worden om financierings- en actiekaarten te kopen.\nGespendeerd krediet wordt op basis van de kredietklasse van de speler in de corresponderende wijk verdeeld over de verschillende iconen.\nTijdens een bankrun worden op basis van een gooi met de wijkdobbelsteen bepaald welke iconen in deze wijken getroffen worden.\nSpelers met schulden op die huizenblokken moeten hun schulden betalen.\n(Zie bankrun in het regelboekje voor meer uitleg)", (width / 3) * 2, height/2);
+      image(style.glossaryKrediet, width/2-100, height/2+300);
       break;
     case 7: //bank
       fill(style.white);
@@ -291,6 +299,7 @@ class Glossary
       text("Met actie kaarten kun je het hele spel omgooien.", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("De stapel groene kaarten zijn de actiekaarten.\nDeze kun je kopen voor 10 goud per stuk en hebben verschillende effecten als ze gespeeld worden.\nDe effecten van een gekochte kaart zijn alleen zichtbaar voor de speler die de kaart kocht.", (width / 3) * 2, height/2);
+      image(style.glossaryActiekaart, width/2+400, height/3, 200, 200);
       break;
     case 9: //financierings kaart
       fill(style.white);
@@ -303,6 +312,7 @@ class Glossary
       text("Het oudste bedrijf van Nederland\nis een bierbrouwerij in Wijlre:\n de Koninklijke Brand Bierbrouwerij BV.\nAl sinds 1340 is deze brouwer actief.", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("De stapel rode kaarten zijn de financieringskaarten.\ndeze stellen gebouwen/commodities voor waar je op kunt bieden en zijn de drijfveer van het spel.\nElke kaart heeft een speciale eigenschappen op basis van de getallen en plaatjes die er op staan afgebeeld.\nHieronder vallen gildes, startprijs en productie.\nElke beurt komt er een nieuwe financieringskaart bij, en als 1 speler er 10 verzameld heeft is het spel afgelopen-\nen moeten de scores worden berekend.\nLiggen er aan het begin van een beurt 5 kaarten dan beweegt het voorste bankrunfiche 1 plaats.", (width / 3) * 2, height/2);
+      image(style.glossaryFinancieringskaart, width/2-200, height/2+300, 200, 200);
       break;
     case 10: //gilde
       fill(style.white);
@@ -315,6 +325,7 @@ class Glossary
       text("Een gilde is een belangenorganisatie voor mensen\ndie in dezelfde beroepsgroep werken.", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("Financieringskaarten behoren allemaal tot een gilde.\nAls je meerdere kaarten met hetzelfde gilde hebt krijg je 1 extra stuk groene/rode productie voor elke kaart die tot hetzelfde gilde behoort.", (width / 3) * 2, height/2);
+      image(style.glossaryGilde, width/2+200, height/2+200, 200, 200);
       break;
     case 11: //gevangenis
       fill(style.white);
@@ -327,7 +338,7 @@ class Glossary
       text("Zebras zijn eigenlijk paarden die ontsnapt\nzijn uit de gevangenis.", AVATAR_XPOS + 50, 200, 200);
       fill(style.white);
       text("Als je degradeerd naar de gevangenis (zie degraderen/promoveren voor meer uitleg) blijf je in het spel, maar kun je minder dingen doen.\n Tijdens jouw beurt mag je alle normale beurtopties uitvoeren behalve bieden op fanancieringkaarten.\n Al het goud/krediet wat je verdient in de beurt moet direct gebruikt worden om schulden te betalen.\nAls al je schulden zijn betaald promoveer je weer naar kredietklasse I\nAls je in de gevangenis zit en je je schulden niet kunt betalen tijdens een bankrun ga je failliet en is het spel voor jou over.", (width / 3) * 2, height/2);
-
+      image(style.gevangenis, width/2+200, height/2+300, 800, 200);
       break;
     }
   }

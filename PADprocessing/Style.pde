@@ -68,6 +68,10 @@ class Style
   PImage glossaryKopen;
   PImage glossaryBank;
   PImage glossarySpeech;
+  PImage bankrunMeter;
+  PImage kredietKlassen;
+  PImage gold;
+  PImage gevangenis;
 
   PImage scoreblok;
 
@@ -141,6 +145,10 @@ class Style
     glossaryKopen = loadImage("data/glossary_kopen-verkopen.png");
     glossaryBank = loadImage("data/glossary_bank.png");
     glossarySpeech = loadImage("data/glossary_speechbubble.png");
+    bankrunMeter = loadImage("data/bankrunMeter.png");
+    kredietKlassen = loadImage("data/kredietKlassen.png");
+    gold = loadImage("data/gold.png");
+    gevangenis = loadImage("data/gevangenis.png");
 
     scoreblok = loadImage("data/scoreblok.PNG");
   }
