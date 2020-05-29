@@ -1197,7 +1197,7 @@ class Screens
     text("goederen uit de bedrijfsmarkt (rood) en voeg", 800, 650);
     text("deze toe aan de Natuurlijke Voorraad.", 800, 700);
     previous(60);
-    next(50);
+    next(52);
   }
   void screen48()
   {
@@ -1213,7 +1213,7 @@ class Screens
     text("goederen uit de consumentenmarkt (groen) en voeg", 800, 650);
     text("deze toe aan de Natuurlijke Voorraad.", 800, 700);
     previous(60);
-    next(50);
+    next(52);
   }
   void screen49()
   {
