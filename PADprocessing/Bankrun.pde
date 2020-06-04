@@ -37,7 +37,6 @@ class Bankrun
   {
     imageMode(CENTER);
     image(style.bankrunfiche, bankrunficheX, bankrunficheY, bankrunficheSizeX, bankrunficheSizeY);
-    count++;
     if (overlaps(bankrunficheX, bankrunficheY, bankrunficheSizeX, bankrunficheSizeY))
     {
       bankrunCount++;

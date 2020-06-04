@@ -78,9 +78,6 @@ class Screens
 
     bankrun.bankrunSteps = amountOfPlayers +1;
 
-    //This variable makes it so that this screen doesn't get skipped
-    //because of this variable you can't go to the next screen within the first 0.5 seconds (30 frames)
-
     //Button for 'bord opzetten'
     if (overlaps(400, 450, 500, 500)) {
       sounds.buttonPush.play();

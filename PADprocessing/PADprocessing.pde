@@ -345,10 +345,10 @@ boolean overlapsHover(float x0, float y0, float w0, float h0)
 //Count makes it impossible for the player to accidentally skip a screen by holding the mouse button for too long
 void previous(int previousScreen)
 {
-  rectMode(CENTER);
+  imageMode(CENTER);
   fill(style.white);
   image(style.linkerPijl, 100, 865, 100, 50);
-  if (overlaps(100, 850, 100, 50))
+  if (overlaps(100, 865, 100, 50))
   {
     sounds.buttonPush.play();
     screen = previousScreen;
@@ -360,7 +360,7 @@ void previous(int previousScreen)
 //Count makes it impossible for the player to accidentally skip a screen by holding the mouse button for too long
 void next(int nextScreen)
 {
-  rectMode(CENTER);
+  imageMode(CENTER);
   fill(style.white);
   image(style.rechterPijl, 1500, 865, 100, 50);
   if (bankrun.bankrun)
