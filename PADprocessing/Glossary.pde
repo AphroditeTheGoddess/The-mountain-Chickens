@@ -60,7 +60,7 @@ class Glossary
       glossaryState = GLOSSARY_DORMENT;
     }
 
-    if (mouseX > 1600 && mousePressed == true && glossaryState == GLOSSARY_DORMENT || overlaps(GLOSSARY_OPENBUTTON_XPOS, GLOSSARY_OPENBUTTON_YPOS, 150, 150, mouseX, mouseY) && mousePressed) {
+    if (mouseX > 1600 && mousePressed == true && glossaryState == GLOSSARY_DORMENT || overlaps(GLOSSARY_OPENBUTTON_XPOS, GLOSSARY_OPENBUTTON_YPOS, 150, 150)) {
       glossaryState = GLOSSARY_OPENING;
     }
     if (glossaryState == GLOSSARY_OPEN) {
@@ -91,7 +91,7 @@ class Glossary
       }
     }
 
-    if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && navigationTimer <= 0)
+    if (overlaps(100, 850, 100, 50) && navigationTimer <= 0)
     {
       if (glossaryState == GLOSSARY_OPEN) {
         glossaryState = GLOSSARY_DORMENT;

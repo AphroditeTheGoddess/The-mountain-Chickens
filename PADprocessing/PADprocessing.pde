@@ -11,6 +11,7 @@ Sounds sounds;
 int screen = 1;
 int amountOfPlayers;
 int count;
+final int countLimit = 40;
 // 0 voor beginners versie, 1 voor volledige versie.
 int version;
 
@@ -31,12 +32,14 @@ void setup()
 
 void draw()
 {
+  count++;
   background(style.backgroundColor);
   //println(screen);
   println("Screen " + screen);
   println("turn " + counter.turn);
   println("round " + counter.round);
   println("bankrun " + bankrun.bankrunCount);
+  println("count : " + count);
   counter.Count();
 
   bankrun.bankrunTrigger();
@@ -300,12 +303,28 @@ void draw()
   }
 }
 
+//This function calculates whether or not a rectangle has been clicked on.
 //Enter the coördinates (x0, y0) and the sizes (w0, h0) of the rect you want to calculate the overlap with.
-//Also enter the x and y position of the mouse (x1, y1)
+//The count makes it so that you dont accidentally skip a screen by holding the mouse button too long.
 //NOTE: this only works when the rect is in rectMode(CENTER).
-boolean overlaps(float x0, float y0, float w0, float h0, float x1, float y1)
+boolean overlaps(float x0, float y0, float w0, float h0)
 {
-  if (x1 > (x0 - w0/2) && x1 < (x0 + w0/2) && y1 > (y0 - h0/2) && y1 < (y0 + h0/2))
+  if (mouseX > (x0 - w0/2) && mouseX < (x0 + w0/2) && mouseY > (y0 - h0/2) && mouseY < (y0 + h0/2) && mousePressed && count > countLimit)
+  {
+    count = 0;
+    return true;
+  } else
+  {
+    return false;
+  }
+}
+
+//This function calculates if the mouse is hovering over a rectangle.
+//Enter the coördinates (x0, y0) and the sizes (w0, h0) of the rect you want to calculate the overlap with.
+//NOTE: this only works when the rect is in rectMode(CENTER).
+boolean overlapsHover(float x0, float y0, float w0, float h0)
+{
+    if (mouseX > (x0 - w0/2) && mouseX < (x0 + w0/2) && mouseY > (y0 - h0/2) && mouseY < (y0 + h0/2))
   {
     return true;
   } else
@@ -314,32 +333,29 @@ boolean overlaps(float x0, float y0, float w0, float h0, float x1, float y1)
   }
 }
 
-//This function draws a rectangle in the bottom left corner of the screen
+//This function draws an arrow in the bottom left corner of the screen
 //When it is clicked the screen changes to the screen number given in the paramater of this function
-//Count makes it impossible for the player to accidentally skip a screen
+//Count makes it impossible for the player to accidentally skip a screen by holding the mouse button for too long
 void previous(int previousScreen)
 {
   rectMode(CENTER);
   fill(style.white);
   image(style.linkerPijl, 100, 865, 100, 50);
-  count++;
-  if (overlaps(100, 850, 100, 50, mouseX, mouseY) && mousePressed && count > 40)
+  if (overlaps(100, 850, 100, 50))
   {
     sounds.buttonPush.play();
     screen = previousScreen;
-    count = 0;
   }
 }
 
-//This function draws a rectangle in the bottom right corner of the screen
+//This function draws an arrow in the bottom right corner of the screen
 //When it is clicked the screen changes to the screen number given in the paramater of this function
-//Count makes it impossible for the player to accidentally skip a screen
+//Count makes it impossible for the player to accidentally skip a screen by holding the mouse button for too long
 void next(int nextScreen)
 {
   rectMode(CENTER);
   fill(style.white);
   image(style.rechterPijl, 1500, 865, 100, 50);
-  count++;
   if (bankrun.bankrun)
   {
     if (version == 0) {
@@ -350,10 +366,9 @@ void next(int nextScreen)
     }
     return;
   }
-  if (overlaps(1500, 865, 100, 50, mouseX, mouseY) && mousePressed && count > 40)
+  if (overlaps(1500, 865, 100, 50))
   {
     sounds.buttonPush.play();
     screen = nextScreen;
-    count = 0;
   }
 }

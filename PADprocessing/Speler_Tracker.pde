@@ -15,7 +15,7 @@ public class Speler_Tracker {
     }
     text("speler: "+ spelers, 900, 600);
     text("end turn", 900, 500);
-    if (overlaps(900, 600, 100, 50, mouseX, mouseY) && mousePressed)
+    if (overlaps(900, 600, 100, 50))
     {
       nextplayer = true;
     }
