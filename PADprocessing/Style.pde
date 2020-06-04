@@ -6,6 +6,7 @@ class Style
   color backgroundColor;
   color black;
   color white;
+  color glossaryBlue;
 
   PImage screen4;
   PImage screen6;
@@ -81,6 +82,7 @@ class Style
     backgroundColor = color(37, 116, 179);
     black = color(0);
     white = color(255);
+    glossaryBlue = color(7, 53, 90);
 
     screen4 = loadImage("data/screen4.PNG");
     screen6 = loadImage("data/screen6.PNG");
