@@ -1,7 +1,7 @@
-final int bankrunficheX = 1150;
-final int bankrunficheY = 790;
-final int bankrunficheSizeX = 275;
-final int bankrunficheSizeY = 250;
+final int BANKRUNFICHE_X = 1150;
+final int BANKRUNFICHE_Y = 790;
+final int BANKRUNFICHE_SIZE_X = 275;
+final int BANKRUNFICHE_SIZE_Y = 250;
 
 class Bankrun 
 {
@@ -36,8 +36,8 @@ class Bankrun
   void bankrunFiche()
   {
     imageMode(CENTER);
-    image(style.bankrunfiche, bankrunficheX, bankrunficheY, bankrunficheSizeX, bankrunficheSizeY);
-    if (overlaps(bankrunficheX, bankrunficheY, bankrunficheSizeX, bankrunficheSizeY))
+    image(style.bankrunfiche, BANKRUNFICHE_X, BANKRUNFICHE_Y, BANKRUNFICHE_SIZE_X, BANKRUNFICHE_SIZE_Y);
+    if (overlaps(BANKRUNFICHE_X, BANKRUNFICHE_Y, BANKRUNFICHE_SIZE_X, BANKRUNFICHE_SIZE_Y))
     {
       bankrunCount++;
       screen = 24;
