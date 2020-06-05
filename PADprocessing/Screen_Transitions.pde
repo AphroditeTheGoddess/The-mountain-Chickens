@@ -8,6 +8,7 @@ public class Screen_Transitions {
   float growthY;
   int timer;
   int offset;
+  
 
   boolean isFinished = false;
   Screen_Transitions() {
@@ -18,7 +19,7 @@ public class Screen_Transitions {
     growthX = 175;
     growthY = 100;
     timer = 0;
-    MAXTIME = 50;
+    MAXTIME = 30;
   }
   void counter() {
     if (transition) {
