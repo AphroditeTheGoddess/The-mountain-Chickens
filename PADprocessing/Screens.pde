@@ -81,7 +81,7 @@ class Screens
     //Button for 'bord opzetten'
     if (overlaps(400, 450, 500, 500)) {
       sounds.buttonPush.play();
-      screen = 4; 
+      screen = 4;
     }
     //Button for 'start spel'
     if (overlaps(1200, 450, 500, 500)) {
@@ -256,11 +256,11 @@ class Screens
 
     if (overlaps(500, height/2, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 9; 
+      screen = 9;
     }
     if (overlaps(1100, height/2, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 10; 
+      screen = 10;
     }
     previous(7);
   }
@@ -303,15 +303,15 @@ class Screens
 
     if (overlaps(300, 650, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 11; 
+      screen = 11;
     }
     if (overlaps(800, 650, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 12; 
+      screen = 12;
     }
     if (overlaps(1300, 650, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 15; 
+      screen = 15;
     }
 
     text("Einde beurt ->", 1000, 60);
@@ -329,13 +329,13 @@ class Screens
   {
     imageMode(CENTER);
     text("KOPEN", 800, 200);
-    
+
     text("Je mag elke beurt maximaal 4 goederen per markt kopen,", 800, 300);
     text("de prijs ligt aan de schaal waar de goederen uit komen.", 800, 350);
-    
+
     text("Als de markt leeg is kunnen goederen uit de Natuurlijke", 800, 450);
     text("Voorraad gekocht worden voor 9 goud.", 800, 500);
-    
+
     text("Betaal het goud aan de goudreserve.", 800, 600);
 
     next(10);
@@ -345,11 +345,11 @@ class Screens
   {
     imageMode(CENTER);
     image(style.screen12, 300, 550);
-    
+
     text("PRODUCEREN", 900, 200);
     text("Al je kaarten kunnen 1x", 1000, 300);
     text("produceren in jouw beurt.", 1000, 350);
-    
+
     text("Het aantal goederen dat geproduceerd", 1000, 400);
     text("wordt staat onderaan de kaart.", 1000, 450);
 
@@ -364,7 +364,7 @@ class Screens
   {
     imageMode(CENTER);
     image(style.screen13, 300, 550);
-    
+
     text("PRODUCEREN", 900, 200);
     text("Met een handelskaart kan je een", 1000, 300);
     text("aantal goederen omruilen met een", 1000, 350);
@@ -380,12 +380,12 @@ class Screens
   {
     imageMode(CENTER);
     image(style.screen14, 225, 500);
-    
+
     text("PRODUCEREN", 900, 200);
     text("Wanneer je 2 of meer kaarten van dezelfde", 1000, 300);
     text("gilde in je bezit hebt produceert elke", 1000, 350);
     text("kaart van deze gilde, per beurt, één extra goed.", 1000, 400);
-    
+
     text("Handelskaarten geven een extra goed", 1000, 550);
     text("van de al gekozen uitvoer.", 1000, 600);
 
@@ -397,15 +397,15 @@ class Screens
   {
     imageMode(CENTER);
     image(style.screen15, 300, 550);
-    
+
     text("VERKOPEN", 900, 200);
     text("In deze fase kun je kiezen om al je goederen te verkopen.", 800, 300);
-    
+
     text("Plaats de goederen die je wilt", 1000, 400);
     text("verkopen terug in de markten.", 1000, 450);
     text("De verkoopprijs wordt bepaald", 1000, 500);
     text("door de schaal van de markt.", 1000, 550);
-    
+
     text("Als de markt vol worden goed-", 1000, 650);
     text("eren verkocht voor 1 goud, deze", 1000, 700);
     text("komen in de Natuurlijke Voorraad.", 1000, 750);
@@ -413,6 +413,8 @@ class Screens
     next(10);
   }
 
+  //Dit is het dobbelsteen systeem van de begin versie.
+  //Hier wordt uitgelegd wat je met een kredietdobbelsteen moet doen.
   void screen16()
   {
     imageMode(CENTER);
@@ -465,6 +467,7 @@ class Screens
     next(23);
   }
 
+  //Red 10
   void screen17()
   {
     imageMode(CENTER);
@@ -473,7 +476,8 @@ class Screens
     previous(16);
     next(23);
   }
-
+  
+  //Red 20
   void screen18()
   {
     imageMode(CENTER);
@@ -483,6 +487,7 @@ class Screens
     next(23);
   }
 
+  //Groen 10
   void screen19()
   {
     imageMode(CENTER);
@@ -492,6 +497,7 @@ class Screens
     next(23);
   }
 
+  //Groen 20
   void screen20()
   {
     imageMode(CENTER);
@@ -501,6 +507,7 @@ class Screens
     next(23);
   }
 
+  //Blue 10
   void screen21()
   {
     imageMode(CENTER);
@@ -514,6 +521,7 @@ class Screens
     next(23);
   }
 
+  //Blue 20
   void screen22()
   {
     imageMode(CENTER);
@@ -542,8 +550,12 @@ class Screens
   void screen24()
   {
     text("Verplaats het voorste bankrunfiche met 1 stap", width/2, height/5);
-    if(version == 0) {next(8);}
-    if(version == 1) {next(36);}
+    if (version == 0) {
+      next(8);
+    }
+    if (version == 1) {
+      next(36);
+    }
   }
 
   void screen25()
@@ -692,7 +704,7 @@ class Screens
     //Button for 'bord opzetten'
     if (overlaps(400, 450, 500, 500)) {
       sounds.buttonPush.play();
-      screen = 30; 
+      screen = 30;
     }
     //Button for 'start spel'
     if (overlaps(1200, 450, 500, 500)) {
@@ -823,7 +835,7 @@ class Screens
       image(style.text10, mouseX, mouseY-203);
       imageMode(CENTER);
     }
-    
+
     previous(32);
     next(29);
   }
@@ -885,13 +897,13 @@ class Screens
 
     if (overlaps(500, height/2, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 37; 
+      screen = 37;
     }
     if (overlaps(1100, height/2, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 53; 
+      screen = 53;
     }
-    
+
     previous(35);
   }
   void screen37()
@@ -932,11 +944,11 @@ class Screens
 
     if (overlaps(300, 650, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 39; 
+      screen = 39;
     }
     if (overlaps(800, 650, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 40; 
+      screen = 40;
     }
     if (overlaps(1300, 650, 400, 400)) {
       sounds.buttonPush.play();
@@ -950,18 +962,18 @@ class Screens
       sounds.buttonPush.play();
       screen = 44;
     }
-    
+
     previous(37);
   }
   void screen39()
   {
     textMode(CENTER);
     text("KOPEN", 800, 200);
-    
+
     text("Je mag elke beurt maximaal 4 goederen per markt kopen,", 800, 300);
     text("de prijs van de goederen is gelijk aan de schaal waar", 800, 350);
     text("ze zich in bevinden.", 800, 400);
-    
+
     text("Als de markt leeg is, haal de goederen uit de Natuurlijke", 800, 500);
     text("Voorraad, deze kosten 9 goud per goed.", 800, 550);
 
@@ -974,11 +986,11 @@ class Screens
   {
     imageMode(CENTER);
     image(style.screen12, 300, 550);
-    
+
     text("PRODUCEREN", 900, 200);
     text("Al je kaarten kunnen 1x", 1000, 300);
     text("produceren in jouw beurt.", 1000, 350);
-    
+
     text("Het aantal goederen dat geproduceerd", 1000, 400);
     text("wordt staat onderaan de kaart.", 1000, 450);
 
@@ -992,7 +1004,7 @@ class Screens
   {
     imageMode(CENTER);
     image(style.screen13, 300, 550);
-    
+
     text("PRODUCEREN", 900, 200);
     text("Met een handelskaart kan je een", 1000, 300);
     text("aantal goederen omruilen met een", 1000, 350);
@@ -1007,12 +1019,12 @@ class Screens
   {
     imageMode(CENTER);
     image(style.screen14, 225, 500);
-    
+
     text("PRODUCEREN", 900, 200);
     text("Wanneer je 2 of meer kaarten van dezelfde", 1000, 300);
     text("gilde in je bezit hebt produceert elke", 1000, 350);
     text("kaart van deze gilde, per beurt, één extra goed.", 1000, 400);
-    
+
     text("Handelskaarten geven een extra goed", 1000, 550);
     text("van de al gekozen uitvoer.", 1000, 600);
 
@@ -1023,15 +1035,15 @@ class Screens
   {
     imageMode(CENTER);
     image(style.screen15, 300, 550);
-    
+
     text("VERKOPEN", 900, 200);
     text("In deze fase kun je kiezen om al je goederen te verkopen.", 800, 300);
-    
+
     text("Plaats de goederen die je wilt", 1000, 400);
     text("verkopen terug in de markten.", 1000, 450);
     text("De verkoopprijs wordt bepaald", 1000, 500);
     text("door de schaal van de markt.", 1000, 550);
-    
+
     text("Als de markt vol worden goed-", 1000, 650);
     text("eren verkocht voor 1 goud, deze", 1000, 700);
     text("komen in de Natuurlijke Voorraad.", 1000, 750);
@@ -1054,13 +1066,13 @@ class Screens
 
     if (overlaps(500, height/2, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 45; 
+      screen = 45;
     }
     if (overlaps(1100, height/2, 400, 400)) {
       sounds.buttonPush.play();
-      screen = 46; 
+      screen = 46;
     }
-    
+
     previous(38);
   }
   void screen45()
@@ -1070,6 +1082,9 @@ class Screens
     next(46);
     previous(44);
   }
+  
+  //Dit is waar het dobbelsteensysteem van de volledige versie begint. 
+  //Op dit scherm kan je een wijkdobbelsteen selecteren.
   void screen46()
   {
     imageMode(CENTER);
@@ -1078,53 +1093,53 @@ class Screens
     text("(Na de derde bankrun komt er nog één wijk dobbelsteen bij.)", 750, 200);
     text("Wat heb je gegooid?", 400, 575);
     text("Wijk:", 1050, 275);
-    
+
     previous(44);
-    
+
     //Molen
     image(style.molen, 1000, 400, 200, 200);
     if (overlaps(1000, 400, 200, 200)) {
       sounds.buttonPush.play();
       screen = 50;
     }
-    
+
     //Boot
     image(style.boot, 1000, 700, 200, 200);
     if (overlaps(1000, 700, 200, 200)) {
       sounds.buttonPush.play();
       screen = 50;
     }
-    
+
     //Vis
     image(style.vis, 1225, 400, 200, 200);
     if (overlaps(1225, 400, 200, 200)) {
       sounds.buttonPush.play();
       screen = 50;
     }
-    
+
     //Wiel
     image(style.wiel, 1225, 700, 200, 200);
     if (overlaps(1225, 700, 200, 200)) {
       sounds.buttonPush.play();
       screen = 50;
     }
-    
+
     //Bakstenen
     image(style.bakstenen, 1450, 400, 200, 200);
     if (overlaps(1450, 400, 200, 200)) {
       sounds.buttonPush.play();
       screen = 50;
     }
-    
+
     //Bloem
-    image(style.bloem, 1450,700, 200, 200);
+    image(style.bloem, 1450, 700, 200, 200);
     if (overlaps(1450, 700, 200, 200)) {
       sounds.buttonPush.play();
       screen = 50;
     }
     previous(44);
-
   }
+  
   void screen47()
   {
     imageMode(CENTER);
@@ -1134,7 +1149,7 @@ class Screens
     text("Bij rood 20:", 800, 375);
     text("Tel het aantal spelers met 20 of meer krediet", 800, 425);
     text("op de getroffen huizenblokken.", 800, 475);
-    
+
     text("Verwijder vervolgens dezelfde hoeveelheid", 800, 600);
     text("goederen uit de bedrijfsmarkt (rood) en voeg", 800, 650);
     text("deze toe aan de Natuurlijke Voorraad.", 800, 700);
@@ -1150,7 +1165,7 @@ class Screens
     text("Bij groen 20:", 800, 375);
     text("Tel het aantal spelers met 20 of meer krediet", 800, 425);
     text("op de getroffen huizenblokken.", 800, 475);
-    
+
     text("Verwijder vervolgens dezelfde hoeveelheid", 800, 600);
     text("goederen uit de consumentenmarkt (groen) en voeg", 800, 650);
     text("deze toe aan de Natuurlijke Voorraad.", 800, 700);
@@ -1163,15 +1178,15 @@ class Screens
     textSize(40);
     text("Hoeveel spelers hebben 20 of meer krediet op de getroffen huizenblokken?", width/2, height/4);
     int amountOfRects = amountOfPlayers + 1;
-    for(int i = 0; i <= amountOfRects; i++)
+    for (int i = 0; i <= amountOfRects; i++)
     {
       fill(style.white);
       rect((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100);
       fill(style.black);
       text(i, (width/amountOfRects) * i + (width/amountOfRects)/2, height/2);
       fill(style.white);
-      
-      if(overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100))
+
+      if (overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100))
       {
         bankrun.bankrunCount += 2*i;
         screen = 50;
@@ -1273,31 +1288,37 @@ class Screens
     image(style.scoreblok, width/2, height/1.6, style.scoreblok.width/1.5, style.scoreblok.height/1.5);
     textSize(50);
   }
-  
-  //Scherm voor dobbelsteen blauwe 10 (volledige versie)
+
+  //Scherm voor dobbelsteen blauwe 10 en blauwe 20 (volledige versie)
   void screen57()
   {
     bankrun.bankrunThisTurn = false;
     textSize(40);
     text("Hoeveel spelers hebben 10 of meer krediet op de getroffen huizenblokken?", width/2, height/4);
-    int amountOfRects = amountOfPlayers + 1;
-    for(int i = 0; i <= amountOfRects; i++)
+    int amountOfRects = amountOfPlayers + 1; //De + 1 zorgt ervoor dat er nog een 0 bij de knoppen zit.
+    //Dit for loopje zorgt ervoor dat er vierkanten op het scherm komen die je kan selecteren.
+    for (int i = 0; i <= amountOfRects; i++)
     {
       fill(style.white);
       rect((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100);
+      //Deze som zorgt ervoor dat het symmetrisch op het scherm komt.
       fill(style.black);
       text(i, (width/amountOfRects) * i + (width/amountOfRects)/2, height/2);
       fill(style.white);
-      
-      if(overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100))
+
+      if (overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, height/2, 100, 100))
       {
         stappen = i;
         bankrun.bankrunCount += 2*i;
+        //Je klikt bijv. op 1 speler, maar her verandert 2 stappen.
+        //Dus de i is welk scherm je kiest, en zo veel spelers hebben krediet.
+        //Dus het bankrunfiche moet 2 keer de i verplaatsen.
+        //Als 2 spelers zijn geselecteerd, verplaatst het bankrunfiche met 2 stappen.
         screen = 59;
       }
     }
   }
-  
+
   void screen58()
   {
     bankrun.bankrun = false;
@@ -1313,38 +1334,40 @@ class Screens
     text("Stap 4: Als een speler na het onderhandelen niet alle krediet kan afbetalen, degradeerd deze", width/2, height/3 + 260);
     text("Voor elke speler die degradeerd wordt het bankrunfiche met 2 stappen verplaatst", width/2, height/3 + 300);
     text("Hoeveel spelers zijn er gedegradeerd?", width/2, height/3 + 375);
-    
+
     int amountOfRects = amountOfPlayers + 1;
-        for(int i = 0; i <= amountOfRects; i++)
+    for (int i = 0; i <= amountOfRects; i++)
     {
       fill(style.white);
       rect((width/amountOfRects) * i + (width/amountOfRects)/2, 800, 100, 100);
       fill(style.black);
       text(i, (width/amountOfRects) * i + (width/amountOfRects)/2, 800);
       fill(style.white);
-      
-      if(overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, 800, 100, 100))
+
+      if (overlaps((width/amountOfRects) * i + (width/amountOfRects)/2, 800, 100, 100))
       {     
         bankrun.bankrunCount += 2*i;
         screen = 52;
       }
     }
   }
-  
+
   void screen59()
   {
     text("Verplaats het bankrunfiche met " + stappen + " stappen", width/2, height/2);
     next(52);
   }
-  
+
+  //Hier begint het tweede scherm van het dobbelsteensysteem.
+  //Je kan een kredietdobbelsteen selecteren en ze brengen je allemaal naar een ander scherm.
   void screen60()
   {
     imageMode(CENTER);
     text("Gooi nu een kredietdobbelsteen.", 1050, 150);
     text("Wat heb je gegooid?", 1050, 200);
     text("Krediet:", 500, 275);
-    
-    //When you click on the dices, it will bring you to a page about that specific dice.
+
+    //Als je op een wijkdobbelsteen klikt breng dat je naar een specifiek scherm.
     //Red 10
     image(style.r10, 300, 400, 200, 200);
     if (overlaps(300, 400, 200, 200)) {
@@ -1386,7 +1409,7 @@ class Screens
       sounds.buttonPush.play();
       screen = 57;
     }
-    
+
     previous(46);
   }
 }
